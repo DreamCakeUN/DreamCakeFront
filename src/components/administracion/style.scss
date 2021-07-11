@@ -1,5 +1,14 @@
+:root{
+  --ver-bg:#30eb9d;
+  --side-bg:#f1f1f1;
+  --side-a: black;
+  --side-a-acti: #04AA6D;
+  --side-font: white;
+  --side-hover: #555;
+}
+
 .ver{
-    background: #30eb9d;
+    background: var(--ver-bg);
     border-radius: 6px;
     border: none;
     height: 40px;
@@ -14,7 +23,7 @@
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: var(--side-bg);
     position: fixed;
     height: 50%;
     overflow: auto;
@@ -23,21 +32,21 @@
   
   .sidebar a {
     display: block;
-    color: black;
+    color: var(--side-a);
     padding: 16px;
     text-decoration: none;
   }
   
   
   .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-color: var(--side-a-acti) ;
+    color: var(--side-font);
   }
   
   
   .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    background-color: var(--side-hover);
+    color: var(--side-font);
   }
   
   

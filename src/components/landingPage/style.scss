@@ -1,14 +1,29 @@
 :root{
     --color-principal:#7cd5d1;
-}
+    --social-app-bg:#e9e7ea;
+    --copy-bg: #36393f;
+    --font: #FFFFFF;
+    --noti-bg:rgba(255, 255, 255, 0.548);
+    --noti-border:#17a2b8;
+    --carrousel-item-bg:rgb(0, 0, 0);
+    --carrousel-item-font:white;
+    --normal-text:#9556cc;
+    --btn-start-bg: #9556cc;
+    --btn-start-hover:#007bb6;
+    //header
+    --nav-top-li-a-bg: rgb(82, 78, 83);
+    --nav-top-li-a-border: black;
+    --nav-hover: #1291b8 ;
 
+    --info-carru-bg:rgba(0, 0, 0, 0.27);
+}
 .btn-pedidos{
-    color: #7cd5d1 limportan;
-    border-color:#7cd5d1 limportan;
+    color: var(--color-principal);
+    border-color: var(--color-principal);
 }
 .social_app{
     display:block;
-    background: #e9e7ea;
+    background: var(--social-app-bg);
     content: center;
 }
 .tittle >div{
@@ -20,9 +35,6 @@
     padding-top: 20px;
     margin-bottom: 0;
 }
-
-
-
 .content > div{
     padding: 20px;
     display: block;
@@ -33,70 +45,13 @@
     margin-right: auto;
     
 }
-.customer{
-    position: relative;
-    display: inline-block;
-    margin:10px;
-    padding:5px;
-    min-width:12rem;
-    max-width:15rem;
-    width: 30%;
-    background: #fff;
-    box-shadow: 1px 2px 4px rgba(122, 119, 119, 0.618);
-    border-radius: 2%;
-    text-align: center;
-    transition: .4s;
-
-}
-.customer:hover{
-    //padding: 12px;
-    background: #7cd5d178;
-    box-shadow: 1px 2px 4px rgba(19, 17, 17, 0.618);
-}
-.cakeC{
-    display:block;
-    padding:auto;
-    height:80%;
-    justify-content:center;
-    margin:0 auto;
-}
-.cake{
-    width:70%;
-    //height: 10em;
-    border-radius: 0%;   
-}
-.photoC{
-    position: absolute;
-    top: 7rem;
-    left: 5rem;
-    
-}
-.photo{
-    min-width: 2rem;
-    width: 5rem;
-    border-radius: 50%;
-}
-
-.infoC{
-    display: inline-block;
-    padding-top:10px;   
-    text-align: center;
-    font-family: "Homer Simpson UI";
-}
-
-
-.info-customer{
-    font-size: 0.7rem;
-}
 .nameC>h4::first-letter{
     text-transform: uppercase;
 } 
-
 .likes{
     width: 40px;
     border-radius: 50%;
 }
-
 .footer{
     //width: 100%;
     background:var(--color-principal);
@@ -108,13 +63,18 @@
    padding:5px;
    margin:0 auto;
 }
-
 .principalF>a>img{
     margin:0 1rem;
     max-width: 30px;
 }
-
-
+.container-app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.App{
+ flex: 1;
+}
 .areaW{
     display: block;
     padding: 10px;
@@ -124,11 +84,9 @@
     margin-right: auto;
     text-align: center;
 }
-
-
 .copyright-bar{
-    background:#36393f;
-    color: #FFFFFF;
+    background: var(--copy-bg);
+    color:  var(--font);
     text-align: center;
     padding: 5px;
 }
@@ -149,16 +107,13 @@
     position: absolute;
     top: 50%;
     right:50%;
-    background: rgba(255, 255, 255, 0.548);
-    border:solid 1px #17a2b8;
+    background: var(--noti-bg);
+    border:solid 1px var(--noti-border);
     backdrop-filter: blur(2px);
     z-index: 1001;
     transition: 1s;
 }
-
-
 // BANNER
-
 .img-logo {
     padding: 1px;
     width: 63px;
@@ -170,13 +125,13 @@
 }
 .carousel-item{
     height: 30rem;
-    background:rgb(0, 0, 0);
-    color: white;
+    background: var(--carrousel-item-bg);
+    color: var(--carrousel-item-font);
     background-position:center;
     background-size:auto;
 }
 .overlay-text{
-    color: white;
+    color: var(--carrousel-item-font);
     position:absolute; 
     top:100px; 
     Left:50px;
@@ -184,7 +139,7 @@
 }
 .normal-text{
 
-    color: #9556cc;
+    color: var(--normal-text);
     font-weight: bold;
     margin: auto;
     width: 50%;
@@ -212,10 +167,9 @@
     // background-image: url("./cake3.png");
 }
 
-
 .btn-start{
-    background-color: #9556cc;
-    color: white;
+    background-color: var(--btn-start-bg);
+    color: var(--font);
     padding: 8px 130px;
     font-size: 15px;
     opacity: 1;
@@ -224,46 +178,27 @@
     transition:0.2s; 
 }
 .btn-start:hover{
-    background-color:  #007bb6;
-    color: white;
+    background-color: var(--btn-start-hover) ;
+    color: var(--font);
     padding: 13px 150px;
     position: sticky;
     top:0;
 }
 
 // HEADER
-
 .jumbotron-header{
-    background-color: #7cd5d0;
+    background-color: var(--color-principal);
     background-size: auto 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-	z-index: 1001;
-	
 }
 
-
-
-
-.btn-login{
-    background: #1291b8;
-    color: white;
-    border: 1px solid #6dd3ce; 
-    transition: 0.5s;    
+.containder-jumbotron-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.btn-login:hover{
-    background-color:  #007bb6;
-    color: white; 
-}
-.img-logo {
-   margin-left: 2rem;
-  }
 
-.img-user{ 
-    border-radius: 70%;   
-    width: 3rem;
-    max-width: 4rem;
-}
 .btname-user{
     font-weight: bold;    
     font-family: "Homer Simpson UI";
@@ -275,23 +210,21 @@ ul, ol{
     margin: 0px;
     padding: 0px;    
 }
-
 .topnav{        
     margin: 0px;
-    padding: 0px;   
-     
+    padding: 0px;     
 }
 
 .topnav li a{
     text-decoration: none;
-    color: white;
-    background-color: rgb(82, 78, 83);  
+    color: var(--font);
+    background-color: var(--nav-top-li-a-bg);  
     display: block;
     margin-left: -80px;     
     padding-left: 20px;     
     padding-right: 20px;  
     text-align: center;  
-    border-color: black; 
+    border-color: var(--nav-top-li-a-border); 
     z-index: 1000;
 }
 
@@ -301,7 +234,7 @@ ul, ol{
 }
 
 .topnav li a:hover{
-    background-color: #1291b8;       
+    background-color: var(--nav-hover);       
 }
 .topnav li ul{
     display: none;    
@@ -313,11 +246,10 @@ ul, ol{
 }
 
 .arrow{
-    background-color: #7cd5d0;
+    background-color: var(--color-principal);
     border:none;
     width: 15px;
 }
-
 
 .menubtn{
     margin: auto 0; 
@@ -325,7 +257,7 @@ ul, ol{
 
 .info-carousel{
    backdrop-filter: blur(4px);
-   background-color:rgba(0, 0, 0, 0.27);
+   background-color: var(--info-carru-bg);
    position:absolute;
    top:0;
    max-width: 70%;

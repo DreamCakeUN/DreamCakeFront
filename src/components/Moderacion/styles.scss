@@ -1,3 +1,9 @@
+:root{
+    --post-bg:white;
+    --btn-bg:#9556CC;
+    --btn-font: white;
+}
+
 .img-post {
     width: 50px;
     height: 50px;
@@ -7,31 +13,24 @@
     width: 150px;
     height: 150px;
 }
-
-
-
 .post {
-    background-color: white;
+    background-color: var(--post-bg);
     margin: 1rem;
 }
-
 .fecha {
     font-size: 9px;
     text-align: left;
     margin: 2px;
 }
-
 .comments {
     text-align: right;
 }
-
 .btnComentar {
     border: 50%;
 }
-
 .btn-navbar {
-    background: #9556CC;
-    color: white;
+    background: var(--btn-bg);
+    color: var(--btn-font);
     font-weight: bold;
     border-radius: 6px;
     margin: 10px;
@@ -42,8 +41,8 @@
 }
 
 .btn-report {
-    background: #9556CC;
-    color: white;
+    background: var(--btn-bg);
+    color: var(--btn-font);
     border-radius: 6px;
     margin: 10px;
     height: 50px;

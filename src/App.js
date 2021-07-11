@@ -63,36 +63,39 @@ export class App extends React.Component {
     })
     // return <ModPedido pastel={pastel}></ModPedido>
     // window.location.pathname = "/modificarPastel/";
-    
+
   }
 
 
 
 
   render() {
-    if (this.state.showMod) 
+    if (this.state.showMod)
+      return (
+        <div className="App">
+          <Notification notificationManager={this.notificationMngr} />
+          <Header notifications={this.state.notification}></Header>
+          <ModPedido pastel={this.state.modPastel} origen={this.state.id}></ModPedido>
+          <Footer></Footer>
+        </div>
+      )
     return (
-      <div className="App">
-        <Notification notificationManager={this.notificationMngr} />
-        <Header notifications={this.state.notification}></Header>
-        <ModPedido pastel={this.state.modPastel} origen={this.state.id}></ModPedido>
-        <Footer></Footer>
-      </div>
-    )
-    return (
-      <div className="App">
-        <Notification notificationManager={this.notificationMngr} />
-        <Header notifications={this.state.notification}></Header>
-        {window.location.pathname == "/accounts/login/" && <LoginScreen></LoginScreen>}
-        {window.location.pathname == "/accounts/signup/" && <LoginScreen></LoginScreen>}
-        {window.location.pathname == "/accounts/password/reset/" && <LoginScreen></LoginScreen>}
-        {window.location.pathname == "/crearPastel/" && <Pedido></Pedido>}
-        {window.location.pathname == "/modificarPastel/" && <ModPedido pastel={this.state.modPastel}></ModPedido>}
-        {window.location.pathname == "/" && <LandingPage></LandingPage>}
-        {window.location.pathname == "/profile" && <Profile modificar={this.modificar}></Profile>}
-        {window.location.pathname == "/social" && <Social modificar={this.modificar}></Social>}
-        {window.location.pathname == "/admin" && <Admin></Admin>}
-        {window.location.pathname == "/mod" && < Mod > </Mod>}
+      <div className="container-app">
+        <div className="App">
+          <Notification notificationManager={this.notificationMngr} />
+          <Header notifications={this.state.notification}></Header>
+          {window.location.pathname == "/accounts/login/" && <LoginScreen></LoginScreen>}
+          {window.location.pathname == "/accounts/signup/" && <LoginScreen></LoginScreen>}
+          {window.location.pathname == "/accounts/password/reset/" && <LoginScreen></LoginScreen>}
+          {window.location.pathname == "/crearPastel/" && <Pedido></Pedido>}
+          {window.location.pathname == "/modificarPastel/" && <ModPedido pastel={this.state.modPastel}></ModPedido>}
+          {window.location.pathname == "/" && <LandingPage></LandingPage>}
+          {window.location.pathname == "/profile" && <Profile modificar={this.modificar}></Profile>}
+          {window.location.pathname == "/social" && <Social modificar={this.modificar}></Social>}
+          {window.location.pathname == "/admin" && <Admin></Admin>}
+          {window.location.pathname == "/mod" && < Mod > </Mod>}
+
+        </div>
         <Footer></Footer>
       </div>
 
