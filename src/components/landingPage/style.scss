@@ -170,12 +170,14 @@
 .btn-start{
     background-color: var(--btn-start-bg);
     color: var(--font);
-    padding: 8px 130px;
+    padding: 8px 40px;
+    width: 100%;
     font-size: 15px;
     opacity: 1;
     margin-top: 50px;
     border: 0px;
     transition:0.2s; 
+    text-align: center;
 }
 .btn-start:hover{
     background-color: var(--btn-start-hover) ;
@@ -260,7 +262,7 @@ ul, ol{
    background-color: var(--info-carru-bg);
    position:absolute;
    top:0;
-   max-width: 70%;
+   max-width: 80%;
    height: 100%;
    margin:0 10%;
    align-items: center;
