@@ -1,5 +1,6 @@
 import React from "react";
 import Cookies from 'js-cookie';
+import foto from '../../../static/images/foto1.png';
 
 
 export class Update extends React.Component {
@@ -60,21 +61,26 @@ export class Update extends React.Component {
     render(){
 
         return(
-            <form className ="container">
-                <div className=" form-row">
-                    <div className="update.form-group">
-                        <label for="update-label"> Nombre </label>
-                        <input type = "text" class= "update-name" id="update-name"  onChange={(e)=>{this.setState({full_name: e.target.value})}} placeholder="Ingresar Nombre" ></input>
+            <form className ="form">
+                <div className=" form-group">
+                    <div className="update form-group">
+                        <label for="update-nombre"> Nombre </label>
+                        <input type = "text" className= "update-name form-control" id="update-nombre"  onChange={(e)=>{this.setState({full_name: e.target.value})}} placeholder="Ingresar Nombre" ></input>
                     </div>
                 </div>
-                <div className="form-group">
-                    <label for="update-photo"><span>Foto</span></label>
+                <div className="form-group justify-content-center">
+                    <label for="update-photo"  className=" form-control btn btn-outline-info">
+                        <img className="foto" src={foto}/>
+								Escoger foto
+                    </label>
                     <input type ="file" className="update-photo"  id="update-photo" onChange={(e)=>this.setState({foto:e.target.files[0]})} accept="image/*"></input>
                     <div id="draw"></div>
                 </div>
                     
-                <button  className="btn btn-danger" onClick={this.deleteUser}>Borrar</button>
-                <button className="btn btn-success" onClick = {this.onSubmitForm}>Actualizar</button>
+                <div className="row justify-content-center">
+                    {/* <button  className="btn btn-outline-info" onClick={this.deleteUser}>Borrar</button> */}
+                    <button className="btn btn-info" onClick = {this.onSubmitForm}>Actualizar</button>
+                </div>
             </form>
         )
     }

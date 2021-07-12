@@ -5,6 +5,7 @@ import { Notifications } from "./notifications/notifications"
 import { Register } from '../login/register';
 import { Login } from '../login/login';
 import Cookies from 'js-cookie';
+import logo from '../../static/images/logo3.svg';
 
 export class HeaderUpdater extends React.Component {
     constructor() {
@@ -49,14 +50,7 @@ export class HeaderUpdater extends React.Component {
     putData = (e) => {
         this.setState({ notification: e });
     }
-    menuSelect(e){
-        e.preventDefault();
-        if(e.target.value =="Salir")this.logOut(e);
-        if(e.target.value =="Social")window.location.pathname = "/social"
-        if(e.target.value =="Perfil")window.location.pathname = "/profile"
-        if(e.target.value =="Pastel")window.location.pathname = "/crearPastel/"
-        if(e.target.value =="Inicio")window.location.pathname = "/"
-    }
+    
     logOut(e){
         e.preventDefault();
 
@@ -88,23 +82,28 @@ export class HeaderUpdater extends React.Component {
         console.log('isNull?' + this.state.userInfo == null);
         if (this.state.userInfo == null || this.state.userInfo.hasOwnProperty('detail')) {
             return (
-                <div className="col-lg-6 col-md-6 col-9 row ">
+               <div className="justify-content-between d-flex align-items-center">
+                    <a class = "navbar-brand" href = "/">
+                                <img class="img-fluid rounded-circle header-logo" src={logo} alt="logo DreamCake"/>
+                    </a>
+      
+                    <div className="col-4 col-sm-4">
 
-                    <button type="button" className="col-lg-6 col-sm6 col-6 btn btn-register " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
-                    <Register />
+                        <button type="button" className="btn btn-lg btn-login " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
+                        <button type="button" className="btn btn-lg  btn-primary" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
+                        <Register />                       
+                        <Login />
+                    </div>
 
-
-                    <button type="button" className="col-lg-6 col-sm6 col-6 btn btn-light" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
-                    <Login />
-                </div>
-
+               </div>
             );
         }
         else {
             return (
                 
-                    <div className="col-lg-6 col-sm-6 col-9 row justify-content-end f-wrap">
-                        <div className="col-lg-1 col-sm-2 col-2">
+                   <div className="col-lg-6 col-sm-6 col-9 row justify-content-end f-wrap"> 
+                  
+                       {/*  <div className="col-lg-1 col-sm-2 col-2">
                             <img type="button" className="menubtn img-fluid" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
                             <div className="collapse multi-collapse   badge pop-notification" id="notification">
                                 <Notifications  notifications = {this.props.notifications}></Notifications>
@@ -124,7 +123,48 @@ export class HeaderUpdater extends React.Component {
                                 <option className="btn btn-dark" value="Perfil">Perfil</option>
                                 <option className="btn btn-dark" value="Salir" >Salir</option>
                             </select>
-                        </div>
+                        </div> */}
+
+
+
+
+                        <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around" >
+                            <a class = "navbar-brand" href = "./">
+                                <img class="img-fluid rounded-circle header-logo" src={logo} alt="one piece"/>
+                            </a>
+
+                            
+                                
+                                <button class ="navbar-toggler" type ="button" data-toggle ="collapse" data-target ="#navbarSupportedContend" aria-controls="navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation">
+                                    <spam class ="navbar-toggler-icon"/>
+                                </button>
+                                <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
+                                    <ul class ="navbar-nav mr-auto">
+                                    <li class =" nav-item"><a class="nav-link" href ="/">Inicio</a></li>
+                                    <li class =" nav-item"><a class="nav-link" href ="/crearPastel/">Crear Patel</a></li>
+                                    <li class =" nav-item"><a class="nav-link" href ="/social">Social Cake</a></li>
+                                    <li class =" nav-item"><a class="nav-link" href ="/profile">Perfil</a></li>
+                                    <li class =" nav-item"><a class="nav-link" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
+                                    
+                                    {/* <li class =" nav-item "><a class="nav-link" href ="./about.html">About</a></li> */}
+                                    </ul>
+                                </div> 
+                            <div className="row">   
+                                <img type="button" className="menubtn img-fluid rounded-circle" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
+                                <img className="img-fluid rounded-circle header-profile" style={{width:100}} src={this.state.userInfo.foto} />
+                                        <div className="collapse multi-collapse   badge pop-notification" id="notification">
+                                            <Notifications  notifications = {this.props.notifications}></Notifications>
+                                        </div>
+                            </div>
+                           
+
+                        </nav>
+
+                       
+
+
+
+                      
                         
                     </div>
                     

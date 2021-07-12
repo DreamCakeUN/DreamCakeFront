@@ -17,7 +17,7 @@
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
     font-size: 20px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 20px;  
     margin-bottom: 0;
 }
 
@@ -115,15 +115,7 @@
 }
 
 
-.areaW{
-    display: block;
-    padding: 10px;
-    width:90%;
-    background:var(--color-principal);
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+
 
 
 .copyright-bar{
@@ -147,13 +139,11 @@
 //Notificaciones
 .pop-notification{
     position: absolute;
-    top: 50%;
-    right:50%;
+    top: 5rem;
+    right:7rem;
     background: rgba(255, 255, 255, 0.548);
     border:solid 1px #17a2b8;
     backdrop-filter: blur(2px);
-    z-index: 1001;
-    transition: 1s;
 }
 
 
@@ -241,12 +231,18 @@
 	z-index: 1001;
 	
 }
-
+.header-logo{
+    width: 100px;
+    margin-left: 3rem;
+}
+.header-profile{
+ margin-right: 5rem;
+}
 
 
 
 .btn-login{
-    background: #1291b8;
+    background: #6608be;
     color: white;
     border: 1px solid #6dd3ce; 
     transition: 0.5s;    
@@ -321,7 +317,10 @@ ul, ol{
 
 .menubtn{
     margin: auto 0; 
+    width:35px;
+    transition: 1s;
 }
+
 
 .info-carousel{
    backdrop-filter: blur(4px);
@@ -332,4 +331,8 @@ ul, ol{
    height: 100%;
    margin:0 10%;
    align-items: center;
+}
+//Container
+.container{
+    margin-top: 10rem;
 }
