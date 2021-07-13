@@ -1,5 +1,6 @@
 :root{
     --color-principal:#7cd5d1;
+    --color-secundario: #9556cc;
     --social-app-bg:#e9e7ea;
     --copy-bg: #36393f;
     --font: #FFFFFF;
@@ -52,6 +53,9 @@
     width: 40px;
     border-radius: 50%;
 }
+
+
+
 .footer{
     //width: 100%;
     background:var(--color-principal);
@@ -59,6 +63,22 @@
    // bottom: 0;
    
 }
+.footer-text{
+    text-align: center;
+    color: white;
+    font-family:roboto, sans-serif;
+    line-height: 1.6;
+}
+.hr{
+    width: 60px; 
+    background-color:var(--color-principal); 
+    height: 2px;
+}
+.NoPadding{
+    margin: 16px -12px 0px;
+}
+
+
 .principalF{
    padding:5px;
    margin:0 auto;
