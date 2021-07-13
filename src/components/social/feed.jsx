@@ -35,7 +35,7 @@ export class Feed extends React.Component {
 	render() {
 		if(this.state.pasteles!= undefined){
 			return (
-				<div class="container bg-light">
+				<div class="bg-light">
 					{this.props.posts.map(post =><Post modificar={this.props.modificar} post={post}></Post>)}
 				</div>
 			);

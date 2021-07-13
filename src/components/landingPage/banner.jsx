@@ -57,7 +57,7 @@ export class Banner extends React.Component {
                                     </div>
                                     
 
-                                    <div className="info-carousel">
+                                    <div className="carousel-caption">
                                         <div className="text-center" >
                                             <h2>Crea tu Pastel</h2>
                                             <p>1.) ¡Registrate! </p>
@@ -69,9 +69,9 @@ export class Banner extends React.Component {
 
                                             <button type="button" className="btn-start mx-auto d-md-block" id="comenzar" onClick={this.realizarPedido} > COMENZAR </button>
 
-                                            <div className="carousel-caption d-none d-md-block" >
+                                           {/*  <div className="carousel-caption d-none d-md-block" >
                                                 <h3>Conoce nuestras promociones</h3>
-                                            </div>
+                                            </div> */}
                                         </div >
                                     </div>
                                     
@@ -82,7 +82,7 @@ export class Banner extends React.Component {
                                        <div className="card">
                                        <img src={promo.image} className="img-fluid" />
                                        </div>
-                                       <div className="carousel-caption info-carousel">
+                                       <div className="carousel-caption">
                                             <h1>{promo.title}</h1>
                                             <h5>{promo.text}</h5>
                                         </div>
@@ -108,9 +108,9 @@ export class Banner extends React.Component {
 
     render() {
         return (
-
-            <this.promos promos={this.state.promos} />
-
+            <div style={{marginTop:10}}>
+                <this.promos promos={this.state.promos} />
+            </div>
 
         )
     }

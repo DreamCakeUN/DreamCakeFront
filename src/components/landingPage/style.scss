@@ -158,7 +158,19 @@
     padding: 1px;
     width: 200px;
 }
-.carousel-item{
+
+.carousel-caption{
+    backdrop-filter: blur(4px);
+    background-color:rgba(0, 0, 0, 0.27);
+    position:absolute;
+    top:0;
+    max-width: 70%;
+    height: 100%;
+    margin:0 10%;
+    align-items: center;
+ }
+.carousel-inner{
+    margin-top:6.5rem;
     height: 30rem;
     background:rgb(0, 0, 0);
     color: white;
@@ -226,13 +238,11 @@
 .jumbotron-header{
     background-color: #7cd5d0;
     background-size: auto 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
 	z-index: 1001;
 	
 }
 .header-logo{
-    width: 100px;
+    width: 80px;
     margin-left: 3rem;
 }
 .header-profile{
@@ -322,17 +332,7 @@ ul, ol{
 }
 
 
-.info-carousel{
-   backdrop-filter: blur(4px);
-   background-color:rgba(0, 0, 0, 0.27);
-   position:absolute;
-   top:0;
-   max-width: 70%;
-   height: 100%;
-   margin:0 10%;
-   align-items: center;
-}
 //Container
 .container{
-    margin-top: 10rem;
+    margin:6.5rem auto 0;
 }

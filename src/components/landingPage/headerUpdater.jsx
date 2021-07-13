@@ -128,7 +128,7 @@ export class HeaderUpdater extends React.Component {
 
 
 
-                        <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around" >
+                        <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around " >
                             <a class = "navbar-brand" href = "./">
                                 <img class="img-fluid rounded-circle header-logo" src={logo} alt="one piece"/>
                             </a>
@@ -139,7 +139,7 @@ export class HeaderUpdater extends React.Component {
                                     <spam class ="navbar-toggler-icon"/>
                                 </button>
                                 <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
-                                    <ul class ="navbar-nav mr-auto">
+                                    <ul class ="navbar-nav mr-auto ">
                                     <li class =" nav-item"><a class="nav-link" href ="/">Inicio</a></li>
                                     <li class =" nav-item"><a class="nav-link" href ="/crearPastel/">Crear Patel</a></li>
                                     <li class =" nav-item"><a class="nav-link" href ="/social">Social Cake</a></li>

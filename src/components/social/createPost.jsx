@@ -153,7 +153,7 @@ export class CreatePost extends React.Component {
 		if(this.state.pasteles.length>0){
 			
 			return (
-				<div className="container crearPost">
+				<div className="crearPost">
 					<div className="form-row justify-content-center">
 						<div className="bg-light">
 							<input  id ="imgfile" type="file" onChange={this.handleImageChange} />

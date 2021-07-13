@@ -81,7 +81,7 @@ export class Social extends React.Component {
 	render() {
 
 		return (
-			<div>
+			<div className="container">
 				<CreatePost update={this.update} />
 				<Feed modificar={this.props.modificar} posts={this.state.posts} />
 				<CrearPedido></CrearPedido>

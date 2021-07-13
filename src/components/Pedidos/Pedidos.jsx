@@ -168,10 +168,10 @@ export  class Index extends React.Component {
         return (
             
 
-            <div className ="container row d-flex f-wrap justify-content-center ">
-                
+            <div className ="container">
+                <div className="row  justify-content-center ">
                                    
-                    <div className ="opciones col-lg-3  col-sm-6 ">
+                    <div className ="opciones col-lg-4  col-sm-6 ">
                         <div style ={{margin:5+'px'}}>
                             <div class="dropdown">
                                 <button class="btn btn-outline-info  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuForma" data-toggle="dropdown" aria-expanded="false">
@@ -262,7 +262,7 @@ export  class Index extends React.Component {
                     <div className="boxLoader" id="boxLoader">
                         <div className="loader"></div>
                     </div>
-                    
+                </div>    
             </div>
                
                         
