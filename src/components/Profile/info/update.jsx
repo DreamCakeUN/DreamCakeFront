@@ -9,7 +9,7 @@ export class Update extends React.Component {
         super(props);
 
         this.state = {
-            full_name: '',
+            full_name: this.props.datos.full_name,
             foto: ''
         };
 
@@ -19,6 +19,8 @@ export class Update extends React.Component {
 
     onSubmitForm(event){
         event.preventDefault()
+        console.log(this.state.full_name)
+        
         let form_data = new FormData();
             form_data.append('foto', this.state.foto);
             form_data.append('full_name', this.state.full_name);
@@ -59,13 +61,15 @@ export class Update extends React.Component {
     }
 
     render(){
-
+       
+        
         return(
             <form className ="form">
+                { console.log(this.props)}
                 <div className=" form-group">
                     <div className="update form-group">
                         <label for="update-nombre"> Nombre </label>
-                        <input type = "text" className= "update-name form-control" id="update-nombre"  onChange={(e)=>{this.setState({full_name: e.target.value})}} placeholder="Ingresar Nombre" ></input>
+                        <input type = "text" className= "update-name form-control" id="update-nombre"  onChange={(e)=>{this.setState({full_name: e.target.value})}} placeholder="Ingresar Nombre"  ></input>
                     </div>
                 </div>
                 <div className="form-group justify-content-center">

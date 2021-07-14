@@ -60,8 +60,13 @@ export class CreatePost extends React.Component {
             cakePaint: this.state.pasteles[i],
 			option:i
         })
-		let activar = document.getElementById('post-collapse');
-		activar.hidden=false
+		//desplegar pastel
+		/* let activar = document.getElementById('post-collapse');
+		let btnCancelar = document.getElementById('btn-cancelar');
+		console.log(activar.hidden)
+		activar.hidden=false;
+		 */
+	
     }
 
 	handleImageChange(e) {
@@ -153,41 +158,67 @@ export class CreatePost extends React.Component {
 		if(this.state.pasteles.length>0){
 			
 			return (
-				<div className="card" >
-					<button className="btn btn-info  btn-crearPost" type ="button" data-toggle="collapse" data-target='#form-post' aria-expanded="false" aria-controls="">+ Postear tu pedido</button>
+				
+				<div className="container row crearPost justify-content-start" >
 					
-					<div className="crearPost collapse multi-collapse " id ="form-post">
-						<div className="form col-sm-12 col-lg-12">
-							<div className="form-row ">
-								<input  id ="imgfile" type="file" onChange={this.handleImageChange} />
-								<label htmlFor="imgfile" className=" btn btn-info form-control justify-content-between">
-									<img className="foto" src={foto}/>
-									Escoger foto
-								</label>
-							</div>
-							<div className="form-row">
-										<label htmlFor="pastelID" className="text-light">Escoja la ID de su pastel:</label>
-										<select className="form-control " id="pastelID" value={this.state.option} placeholder="h" onChange = {this.handleSelect}>
-											{this.countCakes(this.state.pasteles)}
-										</select>
-									</div>
-						</div>
+					<div className="col-lg-3">
+						<button className="btn btn-info form-control " type ="button" data-toggle="collapse" data-target='#form-post' aria-expanded="false" aria-controls="">+ Postear pedido</button>
 						
-				</div>
-				<div className="row justify-content-left postearImg" hidden='true'  id="post-collapse">
-								{$imagePreview}
+						<div className="form-post collapse multi-collapse " id ="form-post">
+							<div className="form col-sm-12 col-lg-12">
+								<div className="form-row ">
+									<input  id ="imgfile" type="file" onChange={this.handleImageChange} />
+									<label htmlFor="imgfile" className=" btn btn-info form-control justify-content-between">
+										<img className="foto" src={foto}/>
+										Escoger foto
+									</label>
+								</div>
+								<div className="form-row">
+											<label htmlFor="pastelID" className="text-light">Escoja la ID de su pastel:</label>
+											<select className="form-control " id="pastelID" value={this.state.option} placeholder="h" onChange = {this.handleSelect}>
+												{this.countCakes(this.state.pasteles)}
+											</select>
+								</div>
+							</div>
+						</div>
+						<div className="data-post collapse multi-collapse  justify-content-center"  id="form-post">
+							<div>{this.state.cakePaint!=undefined ?(this.paintCakes(this.state.cakePaint)):('')}</div>
 								
-								<div className =" col-lg-12 col-sm-10 col-12">
-									{this.state.cakePaint!=undefined ?(this.paintCakes(this.state.cakePaint)):('')
-									}
+							<button className="btn btn-info" type="button"  onClick={this.crearPost}>Postear</button>
+							<button className="btn btn-outline-info" type="button" data-toggle="collapse" id="btn-cancelar" data-target='#form-post' aria-expanded="false" aria-controls="">Cancelar</button>
+
+						</div>
+						<br />
+						<a href="/crearPastel/"><button className="btn btn-outline-info form-control " type ="button">+ Crear pedido</button></a>
+					</div>
+
+
+					{/* <div className="col-lg-6  data-post">
+						<div className="row">
+							<div className="col-lg-5 " hidden='true'  id="post-collapse">
+								{$imagePreview}
+							</div>
+							<div className="col-lg-7">			
+								<div className =" col-lg-12 col-sm-12 col-12">
+									{this.state.cakePaint!=undefined ?(this.paintCakes(this.state.cakePaint)):('')}
 								</div>
 								<button className="badge badge-info" type="button"  onClick={this.crearPost}>Post</button>
+					</div>
 						</div>
+					</div> */}
+					
 				</div>
 			);
-		}else{return <div>
-			
-			<button className="badge " onClick={this.getCakes}>Cargando...</button>
-		</div>}
+		}else{
+			return (
+				<div className="col-lg-3  card-body justify-content-center">
+					<label className="text-wrap" for="pedido" onClick={this.getCakes}>
+						Aun no tienes ningun pedido, empieza ahora!!
+						<br />
+						<button className="btn btn-info" id="pedido">Crear Pedido</button>
+					</label>
+				</div>
+			)
+		}
 	}
 }

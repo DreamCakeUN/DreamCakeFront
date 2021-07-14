@@ -37,10 +37,10 @@ export class Social extends React.Component {
 		this.requestUser();
 		this.loadPosts();
 		
-		this.ws.onopen = evt => this.send(); 
+		/* this.ws.onopen = evt => this.send(); 
 		this.ws.onclose = evt => window.location.reload(); 
 		this.ws.onmessage = evt => this.loadPosts();
-		this.ws.onerror = evt => console.log(JSON.stringify(evt)); 
+		this.ws.onerror = evt => console.log(JSON.stringify(evt));  */
 	}
 
 	requestUser() {
@@ -82,14 +82,13 @@ export class Social extends React.Component {
 
 		return (
 			<div className="container">
-				<div className="row ">
-					<div className="col-lg-3 col-sm-2 col-12">
-						<CreatePost update={this.update} />
-					</div>
+				<div className="row justify-content-center">
+					
+					<CreatePost update={this.update} />
+					
 					<div className="col-lg-6 col-sm-8 col-12">
 						<Feed modificar={this.props.modificar} posts={this.state.posts} />
 					</div>
-					<CrearPedido></CrearPedido>
 				</div>
 			</div>
 		);
@@ -97,21 +96,5 @@ export class Social extends React.Component {
 }
 
 
-export class CrearPedido extends React.Component {
-	constructor() {
-		super();
-		this.state={
 
-		}
-	}
-	render(){
-		return( 
-			<div className="row">
-				<a className="col-3 col-sm-1 col-md-1 col-lg-1 btn-CrearPedido" href="/crearPastel/"><img className="img-fluid" src={añadir} alt="" /></a>
-			</div>
-		)
-	}
-
-
-}
 
