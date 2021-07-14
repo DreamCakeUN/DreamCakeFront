@@ -32,14 +32,14 @@ delicia para los ojos y un capricho para el paladar
                             </p>
                         </div>
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold">Products</h6>
+                            <h6 class="text-uppercase fw-bold">Productos</h6>
                             <hr className="hr mb-4 mt-0 d-inline-block mx-auto"/>
                             <p><a href="#!" class="footer-text">Tres Leches</a></p>
                             <p><a href="#!" class="footer-text">Fondant</a></p>
                             <p><a href="#!" class="footer-text">Cheesecake</a></p>
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold">Useful links</h6>
+                            <h6 class="text-uppercase fw-bold">Atajos</h6>
                             <hr className="hr mb-4 mt-0 d-inline-block mx-auto"/>
                             <p><a href="#!" class="footer-text">Tu cuenta</a></p>
                             <p><a href="#!" class="footer-text">Registrate</a></p>
@@ -47,7 +47,7 @@ delicia para los ojos y un capricho para el paladar
                             <p><a href="#!" class="footer-text">Ayuda</a> </p>
                         </div>
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 class="text-uppercase fw-bold">Contact</h6>
+                            <h6 class="text-uppercase fw-bold">Contacto</h6>
                             <hr className="hr mb-4 mt-0 d-inline-block mx-auto"/>
                             <p><a href="#!" class="footer-text"> Cra 45, Bogotá</a></p>
                             <p><a href="#!" class="footer-text">dreamcake@gmail.com</a></p>
