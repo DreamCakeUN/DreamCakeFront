@@ -3,6 +3,7 @@ import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import logo from '../../static/images/logo.svg';
 import { Login } from "./login";
+import swal from 'sweetalert';
 
 export class Register extends React.Component {
 
@@ -58,12 +59,16 @@ export class Register extends React.Component {
         if (response.statusText === 'OK') {
             let json = await response.json();
             console.log(json);
+            swal({icon:"succes",
+            text:'Credenciales incorrectas'});
             window.location.pathname = "/profile";
         }
         else {
             let js = await response.json()
             if (response.status === 400) {
                 console.log("credenciales incorrectas")
+                swal({icon:"error",
+                text:'Datos incorrectos'});
             } else if (response.status === 403) {
                 console.log("sesion ya iniciada " + JSON.stringify(js))
             } else {
@@ -71,7 +76,7 @@ export class Register extends React.Component {
             }
         }
 
-        window.location.pathname = "/"
+        
 
     }
 
@@ -129,13 +134,13 @@ export class Register extends React.Component {
                                             callback={responseFacebook}
 
                                             render={renderProps => (
-                                                <button className="facebook btn btn-outline-primary" onClick={renderProps.onClick}>Facebook</button>
+                                                <button className="btng" onClick={renderProps.onClick}>Facebook</button>
                                             )} />
                                     </div>
 
 
-                                    <div className="modal-footer">
-                                        <button type="button" className="btn btn-outline-info" id="btnModal" data-dismiss="modal">Cancelar</button>
+                                    <div className="modal-footer justify-content-center">
+                                        <button type="button" className="btng" id="btnModal" data-dismiss="modal">Cancelar</button>
                                     </div>
                                 </div>
                             </div>

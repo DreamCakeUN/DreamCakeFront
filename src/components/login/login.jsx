@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import logo from '../../static/images/logo.svg';
+import swal from 'sweetalert';
 
 class Login extends Component {
 
@@ -37,15 +38,16 @@ class Login extends Component {
     else {
       let js = await response.json()
       if (response.status === 400) {
-        console.log("credenciales incorrectas")
+        console.log("credenciales incorrectas");
+        swal({icon:"error",
+        text:'Credenciales incorrectas'}); 
       } else if (response.status === 403) {
         console.log("sesion ya iniciada " + JSON.stringify(js))
       } else {
         console.log("otro error: " + JSON.stringify(js) + JSON.stringify(response))
       }
-    }
+    }  
     
-    window.location.pathname = "/"
   }
 
   onInputchange(event) {
@@ -86,7 +88,7 @@ class Login extends Component {
             <br />
             <button className="btn btn-primary col-12" onClick={this.onSubmitForm} >Continuar</button>
             
-            <div className="btn">
+            <div className="btng">
               <GoogleLogin
                 clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
                 buttonText="Iniciar con Google"
@@ -95,19 +97,19 @@ class Login extends Component {
                 cookiePolicy={'single_host_origin'}
               />
             </div>
-            <div className="btn">
+            <div className="btn col-12  ">
               <FacebookLogin
                 appId="942968703190705"
                 autoLoad={false}
-                icon="fa-facebook"
+                
                 callback={responseFacebook}
 
                 render={renderProps => (
-                  <button className="btn btn-outline-primary"  onClick={renderProps.onClick}>Facebook</button>
+                  <button className="btng"  icon="fa-facebook" onClick={renderProps.onClick}>Iniciar con Facebook</button>
                 )} />
             </div>
               <div className="modal-footer justify-content-center">
-                 <button type="button" className="btn btn-outline-info" id="btnModal" data-dismiss="modal">Cancelar</button>
+                 <button type="button" className="btng" id="btnModal" data-dismiss="modal">Cancelar</button>
               </div>
           </div>
         </div>
