@@ -153,45 +153,41 @@ export class CreatePost extends React.Component {
 		if(this.state.pasteles.length>0){
 			
 			return (
-				<div className="crearPost">
-					<div className="form-row justify-content-center">
-						<div className="bg-light">
-							<input  id ="imgfile" type="file" onChange={this.handleImageChange} />
-							<label htmlFor="imgfile" className="btn btn-outline-info">
-								<img className="foto" src={foto}/>
-								Escoger foto
-							</label>
+				<div className="card" >
+					<button className="btn btn-info  btn-crearPost" type ="button" data-toggle="collapse" data-target='#form-post' aria-expanded="false" aria-controls="">+ Postear tu pedido</button>
+					
+					<div className="crearPost collapse multi-collapse " id ="form-post">
+						<div className="form col-sm-12 col-lg-12">
+							<div className="form-row ">
+								<input  id ="imgfile" type="file" onChange={this.handleImageChange} />
+								<label htmlFor="imgfile" className=" btn btn-info form-control justify-content-between">
+									<img className="foto" src={foto}/>
+									Escoger foto
+								</label>
+							</div>
+							<div className="form-row">
+										<label htmlFor="pastelID" className="text-light">Escoja la ID de su pastel:</label>
+										<select className="form-control " id="pastelID" value={this.state.option} placeholder="h" onChange = {this.handleSelect}>
+											{this.countCakes(this.state.pasteles)}
+										</select>
+									</div>
 						</div>
-						<div className="col-lg-2 col-sm-2 col-2">
-								
-									<select className="form-control " id="pastelID" value={this.state.option} placeholder="h" onChange = {this.handleSelect}>
-										
-										{	
-											this.countCakes(this.state.pasteles)
-											
-										}
-										
-									</select>
-								</div>
 						
-					</div>
-					<div className="row justify-content-left postearImg crearPost" hidden='true'  id="post-collapse">
-							
-							<div className =" col-lg-3 col-sm-5 col-12 ">
+				</div>
+				<div className="row justify-content-left postearImg" hidden='true'  id="post-collapse">
 								{$imagePreview}
-							</div>
-							<div className =" col-lg-5 col-sm-7 col-12">
-								{
-								this.state.cakePaint!=undefined ?(this.paintCakes(this.state.cakePaint)):('')
-								}
-							</div>
-							<button className="badge badge-info" type="button"  onClick={this.crearPost}>Post</button>
-					</div>
+								
+								<div className =" col-lg-12 col-sm-10 col-12">
+									{this.state.cakePaint!=undefined ?(this.paintCakes(this.state.cakePaint)):('')
+									}
+								</div>
+								<button className="badge badge-info" type="button"  onClick={this.crearPost}>Post</button>
+						</div>
 				</div>
 			);
 		}else{return <div>
 			
-			<button className="badge badge-primary" onClick={this.getCakes}>RECARGAR</button>
+			<button className="badge " onClick={this.getCakes}>Cargando...</button>
 		</div>}
 	}
 }

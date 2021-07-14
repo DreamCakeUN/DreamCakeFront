@@ -48,7 +48,7 @@ export class Banner extends React.Component {
                             <li data-target="#carouselPromos" data-slide-to="4"></li>
                         </ol>
 
-                        <div className="carousel-inner">
+                        <div className="carousel-inner carousel-banner">
                             
                                 <div className="carousel-item active">
                                     

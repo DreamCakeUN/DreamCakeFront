@@ -35,6 +35,10 @@
 
 }
 //------reaccionesPOST-----
+.reacciones{
+	max-width: 40px;
+	margin: 0 0.5rem;
+}
 .reacciones:hover{
 	border-radius: 50%;
 	width: 110%;
@@ -48,24 +52,25 @@
 
 
 //------postear-----
-.card-post:hover{
-	transition: 0.5s;
-	background-color: #7cd5d019
-	;
+.btn-crearPost{
+	position: fixed;
+	margin-top:1rem;
 }
+
 .crearPost{
-	padding: 5px;
-	position: sticky;
-	z-index: 1000;
-	top:0%;
-	background: #fff;
-	background-color: #9556cca3;
-	border-bottom: solid 1px #9556cc;
-	backdrop-filter: blur(10px);
+	position: fixed;
+	top:10.5rem;
+	padding: 1rem ;
+	background-color: var(--colorBoton);
+	border-radius: 5px;
+
 }
 .postearImg{
-	position: absolute;
-	top:110%;
+	position:fixed;
+	right:2rem;
+	top:1rem;
+	width: 200px;;
+
 }
 input[type="file"]{
 	display:none;

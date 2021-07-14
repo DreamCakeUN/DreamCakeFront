@@ -20,24 +20,23 @@ export class Social extends React.Component {
     }
     usuarios(e) {
         return(
-            <div>
-                <div className=" row justify-content-center">
-                    <div className="card col-12 col-sm-6 col-lg-6">
-                        <img src={e.foto} className="img-fluid"></img>
-                        <div className="card-body">
+                <div className="col-lg-4 col-12 col-sm-6">
+                    <div className="card card-social d-flex flex-column justify-content-between" >
+                        <div>
+                            <img src={e.foto} className="img-fluid"></img>
+                        </div>
+                       
+                        <div>
+                            <h4 className="customer-title justify-content-center"> {e.usuario}</h4> 
                             
-                            <div className="nameC">
-                                <h4 style={{margin:0}}> {e.usuario.full_name}</h4> 
-                            </div>
-                            <div className="counterLikes info-customer">
-                                {this.fecha(e.published_date)} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   <img src={like} className="likes"></img><span>{e.likes}</span>
-                            </div>
+                            <div className="row justify-content-around">
+                                 <span className="badge">{this.fecha(e.published_date)}</span>
+                                 <span className="badge">{e.likes}<img src={like} className="likes"></img></span>
+                             </div>
                         </div>
                     
-                    </div>
                 </div>
-                <br />
-            </div>
+                </div>
 
            
             );
@@ -56,16 +55,20 @@ export class Social extends React.Component {
 
     render() {
         return (
-           
+            
                 <div className="container  bg-light">
+                    {console.log(this.state.data)}
+                    <div className="d-flex flex-wrap">
+                        {this.state.data.map(e => this.usuarios(e))}
+                    </div>
                     
-                    {this.state.data.map(e => this.usuarios(e))}
-                    <br />
+                    
                     <div className="row justify-content-center">
                         <a href="http://localhost:3000/social">
                             <button className="btn btn-info" >Mas...</button>
                         </a>
                     </div>
+                    <br />
                 </div>
 
             

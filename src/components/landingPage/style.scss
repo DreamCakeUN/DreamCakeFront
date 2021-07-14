@@ -22,80 +22,17 @@
 }
 
 
-
-.content > div{
-    padding: 20px;
-    display: block;
-    justify-content:center;
+.card-social{
+    flex:1 100%;
+    padding: 5px;
+}
+.customer-title{
     text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-.customer{
-    position: relative;
-    display: inline-block;
-    margin:10px;
-    padding:5px;
-    min-width:12rem;
-    max-width:15rem;
-    width: 30%;
-    background: #fff;
-    box-shadow: 1px 2px 4px rgba(122, 119, 119, 0.618);
-    border-radius: 2%;
-    text-align: center;
-    transition: .4s;
-
-}
-.customer:hover{
-    //padding: 12px;
-    background: #7cd5d178;
-    box-shadow: 1px 2px 4px rgba(19, 17, 17, 0.618);
-}
-.cakeC{
-    display:block;
-    padding:auto;
-    height:80%;
-    justify-content:center;
-    margin:0 auto;
-}
-.cake{
-    width:70%;
-    //height: 10em;
-    border-radius: 0%;   
-}
-.photoC{
-    position: absolute;
-    top: 7rem;
-    left: 5rem;
-    
-}
-.photo{
-    min-width: 2rem;
-    width: 5rem;
-    border-radius: 50%;
-}
-
-.infoC{
-    display: inline-block;
-    padding-top:10px;   
-    text-align: center;
-    font-family: "Homer Simpson UI";
 }
 
 
-.info-customer{
-    font-size: 0.7rem;
-}
-.nameC>h4::first-letter{
-    text-transform: uppercase;
-} 
 
-.likes{
-    width: 40px;
-    border-radius: 50%;
-}
+
 
 .footer{
     //width: 100%;
@@ -122,11 +59,11 @@
     background:#36393f;
     color: #FFFFFF;
     text-align: center;
-    padding: 5px;
+    padding: 1px;
 }
 .copyright{
     margin: auto;
-    font-size:  12px;
+    font-size:  11px;
 }
 
 .estadisticas{
@@ -169,7 +106,7 @@
     margin:0 10%;
     align-items: center;
  }
-.carousel-inner{
+.carousel-banner{
     margin-top:6.5rem;
     height: 30rem;
     background:rgb(0, 0, 0);
@@ -247,6 +184,8 @@
 }
 .header-profile{
  margin-right: 5rem;
+ width: 50px;
+ height:50px;
 }
 
 
@@ -325,10 +264,11 @@ ul, ol{
 }
 
 
-.menubtn{
+.campana-icon{
     margin: auto 0; 
     width:35px;
     transition: 1s;
+    margin-right:2rem;
 }
 
 

@@ -82,26 +82,38 @@ export class HeaderUpdater extends React.Component {
         console.log('isNull?' + this.state.userInfo == null);
         if (this.state.userInfo == null || this.state.userInfo.hasOwnProperty('detail')) {
             return (
-               <div className="justify-content-between d-flex align-items-center">
-                    <a class = "navbar-brand" href = "/">
-                                <img class="img-fluid rounded-circle header-logo" src={logo} alt="logo DreamCake"/>
-                    </a>
-      
-                    <div className="col-4 col-sm-4">
+               <div>
+                    <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around " >
+                        <a class = "navbar-brand" href = "/">
+                                    <img class="img-fluid rounded-circle header-logo" src={logo} alt="logo DreamCake"/>
+                        </a>
 
-                        <button type="button" className="btn btn-lg btn-login " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
-                        <button type="button" className="btn btn-lg  btn-primary" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
-                        <Register />                       
-                        <Login />
-                    </div>
+                        <button class ="navbar-toggler" type ="button" data-toggle ="collapse" data-target ="#navbarSupportedContend" aria-controls="navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation">
+                                    <spam class ="navbar-toggler-icon"/>
+                                </button>
+                                <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
+                                    <ul class ="navbar-nav mr-auto ">
+                                    <li class =" nav-item"><a class="nav-link" href ="/">Inicio</a></li>
+                                    <li class =" nav-item"><a class="nav-link" href ="/crearPastel/">Crear Patel</a></li>
+                                    <li class =" nav-item"><a class="nav-link" href ="/social">Social Cake</a></li>
+                                    </ul>
+                                </div> 
+        
+                        <div className="col-4 col-sm-4">
 
+                            <button type="button" className="btn btn-lg btn-login " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
+                            <button type="button" className="btn btn-lg  btn-primary" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
+                            <Register />                       
+                            <Login />
+                        </div>
+                    </nav>
                </div>
             );
         }
         else {
             return (
                 
-                   <div className="col-lg-6 col-sm-6 col-9 row justify-content-end f-wrap"> 
+                   <div > 
                   
                        {/*  <div className="col-lg-1 col-sm-2 col-2">
                             <img type="button" className="menubtn img-fluid" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
@@ -150,8 +162,8 @@ export class HeaderUpdater extends React.Component {
                                     </ul>
                                 </div> 
                             <div className="row">   
-                                <img type="button" className="menubtn img-fluid rounded-circle" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
-                                <img className="img-fluid rounded-circle header-profile" style={{width:100}} src={this.state.userInfo.foto} />
+                                <img type="button" className="campana-icon img-fluid rounded-circle" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
+                                <img className=" rounded-circle header-profile" src={this.state.userInfo.foto} />
                                         <div className="collapse multi-collapse   badge pop-notification" id="notification">
                                             <Notifications  notifications = {this.props.notifications}></Notifications>
                                         </div>
@@ -160,12 +172,6 @@ export class HeaderUpdater extends React.Component {
 
                         </nav>
 
-                       
-
-
-
-                      
-                        
                     </div>
                     
         

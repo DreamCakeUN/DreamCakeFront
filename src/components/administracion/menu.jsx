@@ -39,11 +39,13 @@ export class Menu extends React.Component {
 	render() {
 		return (
 			<div class="sidebar">
-				<a class="active" href="/">Home</a>
-				<a name='0' onClick={this.setCurrent} href="#pedidos">Pedidos</a>
-				<a name='1' onClick={this.setCurrent} href="#banner">Banner</a>
-				<a name='2' onClick={this.setCurrent} href="#mod">Moderadores</a>
-				<a name='3' onClick={this.cerrarSesion} href="#logout">Cerrar sesión</a>
+				<div className="btn-group-vertical">
+					<button class="active" className="btn btn-options " href="/">Home</button>
+					<button name='0' className="btn btn-options " onClick={this.setCurrent} href="#pedidos">Pedidos</button>
+					<button name='1' className="btn btn-options " onClick={this.setCurrent} href="#banner">Banner</button>
+					<button name='2' className="btn btn-options " onClick={this.setCurrent} href="#mod">Moderadores</button>
+					<button name='3' className="btn btn-options " onClick={this.cerrarSesion} href="#logout">Cerrar sesión</button>
+				</div>
 			</div>
 		);
 	}

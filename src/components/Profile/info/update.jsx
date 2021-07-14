@@ -79,7 +79,7 @@ export class Update extends React.Component {
                     
                 <div className="row justify-content-center">
                     {/* <button  className="btn btn-outline-info" onClick={this.deleteUser}>Borrar</button> */}
-                    <button className="btn btn-info" onClick = {this.onSubmitForm}>Actualizar</button>
+                    <button className="btn btn-info" onClick = {this.onSubmitForm}>Actualizar datos</button>
                 </div>
             </form>
         )

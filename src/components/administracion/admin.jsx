@@ -304,16 +304,19 @@ export class Admin extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container ">
         <ReactNotification />
-        <div class="sidebar">
-        <Menu menu = {this.changeComponent}></Menu></div>
-        <div class="content">
-        {this.state.id == 0 && <Pedidos datos={this.state.pedidos}></Pedidos>}
-        {this.state.id == 1 && <Banner></Banner>}
-        {this.state.id == 2 && <Moderadores></Moderadores>}
+        <div className="row justify-content-center">
+          <div class="col-lg-3 col-12">
+            <Menu menu = {this.changeComponent}></Menu></div>
+          <div class="col-lg-9 col-12">
+            <div className="card-body">
+              {this.state.id == 0 && <Pedidos datos={this.state.pedidos}></Pedidos>}
+              {this.state.id == 1 && <Banner></Banner>}
+              {this.state.id == 2 && <Moderadores></Moderadores>}
+              </div>
+          </div>
         </div>
-        
       </div>
     );
   }

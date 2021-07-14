@@ -35,10 +35,10 @@ export class Options extends React.Component {
         return (
             <div className="div_options">
                 <div className="btn-group-vertical">
-                    <button name = {0} onClick={this.setCurrent} type="button" class="option- btn">Mi Cuenta</button>
-                    <button name = {1} onClick={this.setCurrent} type="button" class="option- btn">Mis Pasteles </button>
-                    <button name = {2} onClick={this.setCurrent} type="button" class="option- btn">Mis Pedidos</button>
-                    <button type="button" class="btn " onClick={this.cerrarSesion}>Cerrar Sesión</button>
+                    <button name = {0} onClick={this.setCurrent} type="button" className="btn btn-options">Mi Cuenta</button>
+                    <button name = {1} onClick={this.setCurrent} type="button" className="btn btn-options">Mis Pasteles </button>
+                    <button name = {2} onClick={this.setCurrent} type="button" className="btn btn-options">Mis Pedidos</button>
+                    <button type="button" className="btn btn-options " onClick={this.cerrarSesion}>Cerrar Sesión</button>
                 </div>
             </div>
         );
