@@ -100,12 +100,16 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    color: #f1f1f1;
+    color: #c4bdbd;
     margin-top: 0;
     margin-bottom: 1.3em;
     font-family: "Work Sans",sans-serif;
     line-height: 1.6;
     font-size: 100%;
+}
+.footer-text:hover{
+    text-decoration: none;
+    color:white
 }
 .hr-footer{
     width: 100%;
@@ -215,6 +219,23 @@
     background-position: center;
     opacity: 0.8;
     // background-image: url("./cake3.png");
+}
+.navbarText{
+    font-weight: bold;
+    color: #c9c0c0;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    display: block;
+    padding: .5rem 1rem;
+}
+.navbarText:hover{
+    font-weight: bold;
+    color: #ffffff;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
 }
 
 
