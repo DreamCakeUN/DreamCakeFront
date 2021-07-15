@@ -188,14 +188,14 @@ export class Post extends React.Component {
 	
 		
 			return (
-				<div class="row justify-content-center post bg-light" >
-						<div class = "card card-post">
+				<div class=" card-post  row justify-content-center bg-light" >
+						<div class = "card ">
 							
 							<div className="carousel slide"  id={"post"+this.state.id} data_ride="carousel">
 								<div className="carousel-inner carousel-post" >
 									<img className=" carousel-item active img-fluid" src = {this.props.post.foto}></img>
 									<div className=" carousel-item  bg-cake">
-										{this.state.cake!=undefined ?(this.paintCakes(this.state.cake)):(<p>tenemos dificultades para asiciar este pastel  {this.state.id, console.log(this.state.id)}</p>)}
+										{this.state.cake!=undefined ?(this.paintCakes(this.state.cake)):(<p>tenemos dificultades para asociar este pastel  {this.state.id, console.log(this.state.id)}</p>)}
 									</div>
 								</div>
 								

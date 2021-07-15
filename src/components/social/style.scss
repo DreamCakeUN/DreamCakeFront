@@ -5,7 +5,6 @@
 	--crearpost-bg-color:#9556cca3;
 	--crearpost-boder: #9556cc;
 	--input-label-bg:#7cd5d043 ;
-	--info-cake-bg:rgba(0, 0, 0, 0.418);
 }
 .img-post{
 	position: relative;
@@ -39,6 +38,11 @@
 	border-right: solid 1px black;
 	transform: rotateZ(45deg) translateX(8px) translateY(2px);
 
+}
+//card
+.card-post{
+	border-radius: 10px;
+	margin:2rem auto;
 }
 //------reaccionesPOST-----
 .reacciones{
@@ -101,19 +105,26 @@ input+label{
 }
 //----------------carousel----------
 .bg-cake{
-	margin:0 auto;
-	text-align: center;
-	height: 50%;
-	margin:0 auto ;
-	background-image: url('../../static/images/bgInfo.jpg');
+	background-image: url('../../static/images/Background.png');
+	width: 31.8rem;
+	max-width: 35rem;
+	min-width: 10rem;
+	height: 22rem;
+	max-height: 25rem;
+	min-height: 10rem;
+	transition: 0.5s;
 	
 }
 .info-cake{
-	background-color: var(--info-cake-bg);
-	backdrop-filter: blur(4px);
+	background-color: var(--color-secundario);
+	backdrop-filter: blur(7px);
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	min-width: 6rem;
-	width: 7rem;
+	font-size: 2.5rem;
+	text-align: center;
+	height: 90%;
+	width: 80%;
+	margin:1rem auto;
+	border-radius: 3px;
 	
 }
 .btn-CrearPedido{
