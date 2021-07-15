@@ -168,7 +168,7 @@ export class CreatePost extends React.Component {
 							<div className="form col-sm-12 col-lg-12">
 								<div className="form-row ">
 									<input  id ="imgfile" type="file" onChange={this.handleImageChange} />
-									<label htmlFor="imgfile" className=" btn btn-info form-control justify-content-between">
+									<label htmlFor="imgfile" className=" btn-secundario  justify-content-between">
 										<img className="foto" src={foto}/>
 										Escoger foto
 									</label>
@@ -184,8 +184,8 @@ export class CreatePost extends React.Component {
 						<div className="data-post collapse multi-collapse  justify-content-center"  id="form-post">
 							<div>{this.state.cakePaint!=undefined ?(this.paintCakes(this.state.cakePaint)):('')}</div>
 								
-							<button className="btn btn-info" type="button"  onClick={this.crearPost}>Postear</button>
-							<button className="btn btn-outline-info" type="button" data-toggle="collapse" id="btn-cancelar" data-target='#form-post' aria-expanded="false" aria-controls="">Cancelar</button>
+							<button className="btn-principal btn-mini" type="button"  onClick={this.crearPost}>Postear</button>
+							<button className="btn-secundario btn-mini" type="button" data-toggle="collapse" id="btn-cancelar" data-target='#form-post' aria-expanded="false" aria-controls="">Cancelar</button>
 
 						</div>
 						<br />
@@ -215,7 +215,7 @@ export class CreatePost extends React.Component {
 					<label className="text-wrap" for="pedido" onClick={this.getCakes}>
 						Aun no tienes ningun pedido, empieza ahora!!
 						<br />
-						<button className="btn btn-info" id="pedido">Crear Pedido</button>
+						<button className="btn-secundario" id="pedido">Crear Pedido</button>
 					</label>
 				</div>
 			)

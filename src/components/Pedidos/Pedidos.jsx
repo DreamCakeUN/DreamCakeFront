@@ -2,7 +2,8 @@ import React from 'react';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./style.scss";
 import {SliderPicker} from 'react-color';
-import {HeaderUpdater} from '../landingPage/headerUpdater'
+import { Register } from '../login/register';
+import { Login } from '../login/login';
 import Cookies from 'js-cookie';
 
 
@@ -401,7 +402,7 @@ export class Mensaje extends Index{
         if(this.state.user!=''){
             this.postearPastel();
         }else{
-            <HeaderUpdater></HeaderUpdater>
+            <LoginRegister></LoginRegister>
         }
     }
     postearPastel(e) {
@@ -459,7 +460,7 @@ export class Mensaje extends Index{
                         <div className="modal-content">
                             
                             <div className="modal-body">
-                            {f=='0' ? ( <Formulario datos={this.state}></Formulario>):(<HeaderUpdater></HeaderUpdater>) }
+                            {f=='0' ? ( <Formulario datos={this.state}></Formulario>):(<LoginRegister></LoginRegister>) }
                                 
                             </div>
 
@@ -587,4 +588,17 @@ export class Formulario extends React.Component{
         )
     }
 }
-
+export class LoginRegister extends React.Component{
+    render(){
+        return(
+            <div>
+                
+                <button type="button" className="btn-principal" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
+                <button type="button" className="btn-secundario   " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
+                       
+                        <Register />                       
+                        <Login />
+            </div>
+        )
+    }
+}

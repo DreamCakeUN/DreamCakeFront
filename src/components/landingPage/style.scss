@@ -32,6 +32,24 @@
     text-align: center;
 
 }
+.btn-principal:hover{
+    border:solid 1px var(--color-outline);  
+}
+.btn-secundario:hover{
+    background-color:var(--color-boton);
+    color:white; 
+    transition: 0.1s;
+}
+
+.btn-principal:focus{
+   box-shadow:  -1px -1px 30px -6px var(--color-outline);
+}
+.btn-secundario:focus{
+    box-shadow:  -1px -1px 10px var(--color-outline);
+    background-color:var(--color-boton);
+    color:white; 
+    transition: 0.1s;
+}
 .tituloPrincipal
 {
     color:#e85a10;
