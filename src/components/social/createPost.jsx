@@ -162,7 +162,7 @@ export class CreatePost extends React.Component {
 				<div className="container row crearPost justify-content-start" >
 					
 					<div className="col-lg-3">
-						<button className="btn btn-info form-control " type ="button" data-toggle="collapse" data-target='#form-post' aria-expanded="false" aria-controls="">+ Postear pedido</button>
+						<button className="btn-principal " type ="button" data-toggle="collapse" data-target='#form-post' aria-expanded="false" aria-controls="">+ Postear pedido</button>
 						
 						<div className="form-post collapse multi-collapse " id ="form-post">
 							<div className="form col-sm-12 col-lg-12">
@@ -189,7 +189,7 @@ export class CreatePost extends React.Component {
 
 						</div>
 						<br />
-						<a href="/crearPastel/"><button className="btn btn-outline-info form-control " type ="button">+ Crear pedido</button></a>
+						<a href="/crearPastel/"><button className="btn-secundario" type ="button">+ Crear pedido</button></a>
 					</div>
 
 

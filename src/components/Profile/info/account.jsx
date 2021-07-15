@@ -43,8 +43,8 @@ export class Account extends React.Component {
         <label className="title">Número de Pasteles Creados</label>
         <label className="field" >{this.props.datos.pasteles.length}</label>
 
-        <button type="button"  href="#update" className="btn-update" style={{ width: 11 + 'em' }} data-toggle="modal">Actualizar Datos</button>
-        <button  type="button "className=" btn-deleteCount" style={{ width: 11 + 'em' }} onClick={this.deleteUser}>Eliminar Cuenta</button>
+        <button type="button"  href="#update" className="btn-principal" style={{ width: 11 + 'em' }} data-toggle="modal">Actualizar Datos</button>
+        <button  type="button "className="   btn-secundario" style={{ width: 11 + 'em' }} onClick={this.deleteUser}>Eliminar Cuenta</button>
 
         <div className="modal fade" id="update">
           <div className="modal-dialog">
@@ -54,7 +54,7 @@ export class Account extends React.Component {
                 <Update datos = {this.props.datos}></Update>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-outline-info" id="btnModal" data-dismiss="modal">Cerrar</button>
+                <button type="button" className="btn-secundario btn-pequeño" id="btnModal" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
           </div>

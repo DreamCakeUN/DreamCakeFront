@@ -74,7 +74,7 @@ export class Update extends React.Component {
                     </div>
                 </div>
                 <div className="form-group justify-content-center">
-                    <label for="update-photo"  className=" form-control btn btn-outline-info">
+                    <label for="update-photo"  className=" btn-secundario">
                         Escoger foto <img className="foto" src={foto}/>
                     </label>
                     <input type ="file" className="update-photo"  id="update-photo" onChange={(e)=>this.setState({foto:e})} accept="image/*"></input>
@@ -83,7 +83,7 @@ export class Update extends React.Component {
                     
                 <div className="row justify-content-center">
                     {/* <button  className="btn btn-outline-info" onClick={this.deleteUser}>Borrar</button> */}
-                    <button className="btn btn-info" onClick = {this.onSubmitForm}>Actualizar datos</button>
+                    <button className="btn-principal btn-mediano" onClick = {this.onSubmitForm}>Actualizar datos</button>
                 </div>
             </form>
         )

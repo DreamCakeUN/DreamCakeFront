@@ -6,15 +6,38 @@
     --color-boton-hoover:#cd6904c9;
 }
 .btn-principal{
-    color:white;
+    color:white ;
     background-color: var(--color-boton);
     border-radius: 5px;
+    border:none;
+    padding:10px 15px;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+    margin:5px auto;
 }
 .btn-secundario{
-    color:white;
-    background-color: white;
+    background: transparent;
     border-radius: 5px;
-    border:solid 1px var(--color-outline)
+    border:solid 1px var(--color-outline);
+    padding:10px 15px;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+    margin:5px auto;
+
+}
+
+.btn-mediano{
+    width: 50%;
+}
+.btn-pequeño{
+    width: auto;
+}
+.btn-mini{
+    padding: 10px 10px;
+    min-width: auto;
+    width: auto;
 }
 .btn-pedidos{
     color: #7cd5d1 limportan;

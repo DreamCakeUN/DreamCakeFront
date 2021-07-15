@@ -99,13 +99,14 @@ export class HeaderUpdater extends React.Component {
                                     </ul>
                                 </div> 
         
-                        <div className="col-4 col-sm-4">
-
-                            <button type="button" className="btn btn-lg btn-login " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
-                            <button type="button" className="btn btn-lg  btn-primary" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
-                            <Register />                       
-                            <Login />
+                        <div className="col-4 col-sm-4 col-lg-3">
+                            <button type="button" className="btn-principal" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
                         </div>
+                        <div className="col-4 col-sm-4 col-lg-3">
+                            <button type="button" className="btn-secundario   " data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
+                        </div>
+                        <Register />                       
+                        <Login />
                     </nav>
                </div>
             );

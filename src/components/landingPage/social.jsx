@@ -65,7 +65,7 @@ export class Social extends React.Component {
                     
                     <div className="row justify-content-center">
                         <a href="http://localhost:3000/social">
-                            <button className="btn btn-info" >Mas...</button>
+                            <button className="btn-principal" >Ver mas</button>
                         </a>
                     </div>
                     <br />

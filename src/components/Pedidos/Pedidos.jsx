@@ -91,31 +91,31 @@ export  class Index extends React.Component {
         this.setState({forma:event.target.id});
         let btn = document.getElementById('dropdownMenuForma');
         btn.textContent=event.target.textContent;
-        btn.style.setProperty('background','#17a2b859')
+        btn.style.setProperty('background','var(--color-boton)')
      }
     seleccionM =(event)=> {
         this.setState({masa:event.target.id});
         var btn = document.getElementById('dropdownMenuMasa');
         btn.textContent =event.target.textContent;
-        btn.style.setProperty('background','#17a2b859')
+        btn.style.setProperty('background','var(--color-boton)')
      }
     seleccionR =(event)=> {
         this.setState({relleno:event.target.id});
         var btn = document.getElementById('dropdownMenuRelleno');
         btn.textContent =event.target.textContent;
-        btn.style.setProperty('background','#17a2b859')
+        btn.style.setProperty('background','var(--color-boton)')
     }
     seleccionC =(event)=> {
         this.setState({cobertura:event.target.id});
         var btn = document.getElementById('dropdownMenuCubierta');
         btn.textContent =event.target.textContent;
-        btn.style.setProperty('background','#17a2b859')
+        btn.style.setProperty('background','var(--color-boton)')
     }
     seleccionP =(event)=> {
         this.setState({porciones:parseInt(event.target.id)});
         var btn = document.getElementById('dropdownMenuPorciones');
         btn.textContent =event.target.textContent;
-        btn.style.setProperty('background','#17a2b859')
+        btn.style.setProperty('background','var(--color-boton)')
     }
     //seleccionT =(event)=> {this.setState({Tematica:event.target.id})}
     seleccionColor =(event)=> {this.setState({color:event.target.id});}
@@ -174,7 +174,7 @@ export  class Index extends React.Component {
                     <div className ="opciones col-lg-4  col-sm-6 ">
                         <div style ={{margin:5+'px'}}>
                             <div class="dropdown">
-                                <button class="btn btn-outline-info  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuForma" data-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-secundario dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuForma" data-toggle="dropdown" aria-expanded="false">
                                     Forma
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" required>
@@ -186,7 +186,7 @@ export  class Index extends React.Component {
                         </div>
                         <div style ={{margin:5+'px'}}>
                             <div class="dropdown">
-                                <button class="btn btn-outline-info  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuMasa" data-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-secundario  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuMasa" data-toggle="dropdown" aria-expanded="false">
                                     Masa
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -201,7 +201,7 @@ export  class Index extends React.Component {
 
                         <div style ={{margin:5+'px'}}>
                             <div class="dropdown">
-                                <button class="btn btn-outline-info  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuRelleno" data-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-secundario  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuRelleno" data-toggle="dropdown" aria-expanded="false">
                                     Relleno
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -216,7 +216,7 @@ export  class Index extends React.Component {
                         </div>
                         <div style ={{margin:5+'px'}}>
                             <div class="dropdown">
-                                <button class="btn btn-outline-info  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuCubierta" data-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-secundario  dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuCubierta" data-toggle="dropdown" aria-expanded="false">
                                     Cubierta
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -231,7 +231,7 @@ export  class Index extends React.Component {
                         </div> 
                         <div style ={{margin:5+'px'}}>
                             <div class="dropdown">
-                                <button class="btn btn-outline-info  btn-reserva dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuPorciones" data-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-secundario dropdown-toggle" style ={{width:11+'em'}} type="button" id="dropdownMenuPorciones" data-toggle="dropdown" aria-expanded="false">
                                     Porciones
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -446,7 +446,7 @@ export class Mensaje extends Index{
 
             <div class="formulario" style ={{marginTop:10+'px'}} >
                 
-                <button type="button" onClick={()=>getData(this.state),this.postear.bind(this)} href ="#emergente" className="btn btn-info btn" style={{ width:11+'em'}} data-toggle ="modal">Continuar</button>
+                <button type="button" onClick={()=>getData(this.state),this.postear.bind(this)} href ="#emergente" className="btn-secundario" style={{ width:11+'em'}} data-toggle ="modal">Continuar</button>
                 
                 
                 <div className="modal fade" id="emergente">
@@ -459,7 +459,7 @@ export class Mensaje extends Index{
                             </div>
 
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-outline-danger" id="btnModal" data-dismiss="modal">X</button>
+                                <button type="button" className=" btn-secundario btn-mini" id="btnModal" data-dismiss="modal">X</button>
                             </div>
                         </div>
                     </div>
@@ -556,7 +556,7 @@ export class Formulario extends React.Component{
                 </div>
                 <br />
                 <div className="form-group justify-content-around">
-                    <label for="imgfile"  className="btn btn-outline-info col-5"><span>Foto</span></label>
+                    <label for="imgfile"  className="btn-secundario col-5"><span>Foto</span></label>
                     <input type ="file" className="col-sm "  id="imgfile" onChange={(e)=>this.setState({foto:e.target.files[0]})} accept="image/*"></input>
 
                         
