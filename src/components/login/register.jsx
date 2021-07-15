@@ -99,18 +99,19 @@ export class Register extends React.Component {
                                 </div>
                                 <div className="form">
                                     {/* <input placeholder= "Nombre" value={this.state.name} onChange={this.onChange.bind(this)} name="name" id="name" type="text" /> */}
-                                    <label className="badge badge-light" htmlFor="email">Correo:</label>
-                                    <input className="form-control" placeholder="email" value={this.state.email} onChange={this.onInputchange} name="email" id="email" type="email" />
+                                    <label className="modalText" htmlFor="email">Correo:</label>
+                                    <input className="form-control" placeholder="Correo" value={this.state.email} onChange={this.onInputchange} name="email" id="email" type="email" />
                                     {/* <input placeholder= "Usuario" value={this.state.username} onChange={this.onChange.bind(this)} name="username" id="username" type="text" /> */}
-                                    <label className="badge badge-light" htmlFor="password1">Contraseña:</label>
+                                    <label className="modalText" htmlFor="password1">Contraseña:</label>
                                     <input className="form-control " placeholder="Contraseña" value={this.state.password} onChange={this.onInputchange} name="password" id="password1" type="password" />
-                                    <label className="badge badge-light" htmlFor="password2">Contraseña:</label>
+                                    <label className="modalText" htmlFor="password2">Confirmar contraseña:</label>
                                     <input className="form-control" placeholder="Confirmar contraseña" value={this.state.password2} onChange={this.onInputchange} name="password2" id="password2" type="password" />
                                     <br />
                                     {/*<p>{JSON.stringify(this.state)}</p>*/}
-                                    <button className="form-control btn btn-info" onClick={this.onSubmitForm}>Registrarse</button>
+                                    <button className="btn-principal" onClick={this.onSubmitForm}>Registrarse</button>
                                     {/* <spam>{this.state.message}</spam> */}
                                     <br />
+                                    {/*
                                     <div className="btn col-12">
                                         <GoogleLogin
                                             clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
@@ -131,11 +132,11 @@ export class Register extends React.Component {
                                             render={renderProps => (
                                                 <button className="facebook btn btn-outline-primary" onClick={renderProps.onClick}>Facebook</button>
                                             )} />
-                                    </div>
+                                            </div>*/}
 
 
                                     <div className="modal-footer">
-                                        <button type="button" className="btn btn-outline-info" id="btnModal" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" className="btn-secundario btn-mini" id="btnModal" data-dismiss="modal">Cancelar</button>
                                     </div>
                                 </div>
                             </div>
