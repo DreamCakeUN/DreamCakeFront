@@ -34,6 +34,7 @@
     text-align: center;
 
 }
+
 .btn-principal:hover{
     border:solid 1px var(--color-outline);  
 }
@@ -193,9 +194,15 @@
     top:0;
     max-width: 70%;
     height: 100%;
-    margin:0 10%;
+    margin:0 10%;   
     align-items: center;
- }
+    margin-top: 310px;
+
+    
+}
+.carousel-text{
+    font-size: 18px;
+}
 .carousel-banner{
     margin-top:6.5rem;
     background:rgb(0, 0, 0);
