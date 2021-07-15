@@ -16,6 +16,7 @@
     min-width: 10rem;
     max-width: 100%;
     margin:5px auto;
+    font-weight: bold;
 }
 .btn-secundario{
     background: transparent;
@@ -31,7 +32,11 @@
     text-align: center;
 
 }
-
+.tituloPrincipal
+{
+    color:#e85a10;
+    font-weight: bold;
+}
 .btn-mediano{
     width: 50%;
 }

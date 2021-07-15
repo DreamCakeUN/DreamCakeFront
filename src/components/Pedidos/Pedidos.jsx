@@ -92,30 +92,35 @@ export  class Index extends React.Component {
         let btn = document.getElementById('dropdownMenuForma');
         btn.textContent=event.target.textContent;
         btn.style.setProperty('background','var(--color-boton)')
+        btn.style.setProperty('color','white')
      }
     seleccionM =(event)=> {
         this.setState({masa:event.target.id});
         var btn = document.getElementById('dropdownMenuMasa');
         btn.textContent =event.target.textContent;
         btn.style.setProperty('background','var(--color-boton)')
+        btn.style.setProperty('color','white')
      }
     seleccionR =(event)=> {
         this.setState({relleno:event.target.id});
         var btn = document.getElementById('dropdownMenuRelleno');
         btn.textContent =event.target.textContent;
         btn.style.setProperty('background','var(--color-boton)')
+        btn.style.setProperty('color','white')
     }
     seleccionC =(event)=> {
         this.setState({cobertura:event.target.id});
         var btn = document.getElementById('dropdownMenuCubierta');
         btn.textContent =event.target.textContent;
         btn.style.setProperty('background','var(--color-boton)')
+        btn.style.setProperty('color','white')
     }
     seleccionP =(event)=> {
         this.setState({porciones:parseInt(event.target.id)});
         var btn = document.getElementById('dropdownMenuPorciones');
         btn.textContent =event.target.textContent;
         btn.style.setProperty('background','var(--color-boton)')
+        btn.style.setProperty('color','white')
     }
     //seleccionT =(event)=> {this.setState({Tematica:event.target.id})}
     seleccionColor =(event)=> {this.setState({color:event.target.id});}
@@ -254,7 +259,7 @@ export  class Index extends React.Component {
                         
                        {f=='CI' ?(<Pastel2></Pastel2>,<Pastel></Pastel>) : (<PastelC></PastelC>)}
                     </div>
-                    <div className=" col-lg-4  col-sm-12 " style ={{marginTop:10+'px'}}>
+                    <div className="col-lg-4  col-sm-12 " style ={{marginTop:10+'px'}}>
                         <Mensaje getData={this.getData}  Pastel={this.state} ></Mensaje> 
                         
                     </div>
@@ -433,7 +438,7 @@ export class Mensaje extends Index{
         return(
             
         <div>
-            <form className ="" style ={{border:'#17a2b8', color:'#17a2b8'}}>
+            <form className ="tituloPrincipal">
                 <div className="form-row">
                     <label for ="mensaje">Mensaje</label>
                     <textarea required value={this.state.Men}  onChange={this.getM} type="text" className="form-control" ref={this.mensaje} id ="mensaje "placeholder="Mensaje" rows="2"></textarea>
@@ -446,7 +451,7 @@ export class Mensaje extends Index{
 
             <div class="formulario" style ={{marginTop:10+'px'}} >
                 
-                <button type="button" onClick={()=>getData(this.state),this.postear.bind(this)} href ="#emergente" className="btn-secundario" style={{ width:11+'em'}} data-toggle ="modal">Continuar</button>
+                <button type="button" onClick={()=>getData(this.state),this.postear.bind(this)} href ="#emergente" className="btn-principal" style={{ width:11+'em'}} data-toggle ="modal">Continuar</button>
                 
                 
                 <div className="modal fade" id="emergente">
@@ -459,7 +464,7 @@ export class Mensaje extends Index{
                             </div>
 
                             <div className="modal-footer">
-                                <button type="button" className=" btn-secundario btn-mini" id="btnModal" data-dismiss="modal">X</button>
+                                <button type="button" className=" btn-secundario btn-mini" id="btnModal" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -550,11 +555,12 @@ export class Formulario extends React.Component{
             <form className ="form">
                 <div className=" form-row">
                    
-                        <label for="direccion"> Dirección </label>
+                        <label for="direccion" className="tituloPrincipal"> Dirección </label>
                         <input type = "text" className= "form-control" id="direccion" required onChange={(e)=>{this.setState({direccion:e.target.value});this.obtenerDatos()}} placeholder="Ingrese dirección" ></input>
                     
                 </div>
                 <br />
+                
                 <div className="form-group justify-content-around">
                     <label for="imgfile"  className="btn-secundario col-5"><span>Foto</span></label>
                     <input type ="file" className="col-sm "  id="imgfile" onChange={(e)=>this.setState({foto:e.target.files[0]})} accept="image/*"></input>
@@ -570,7 +576,7 @@ export class Formulario extends React.Component{
                 </div>
                 
                     
-                <button  className="btn btn-primary form-control" id="enviar" onClick={(this.enviar.bind(this))}>Enviar</button>
+                <button  className="btn-principal" id="enviar" onClick={(this.enviar.bind(this))}>Enviar</button>
                 
 
                 
