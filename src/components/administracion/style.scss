@@ -1,5 +1,14 @@
+:root{
+  --ver-bg:#30eb9d;
+  --side-bg:#f1f1f1;
+  --side-a: black;
+  --side-a-acti: #04AA6D;
+  --side-font: white;
+  --side-hover: #555;
+}
+
 .ver{
-    background: #30eb9d;
+    background: var(--ver-bg);
     border-radius: 6px;
     border: none;
     height: 40px;

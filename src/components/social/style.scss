@@ -1,3 +1,12 @@
+:root{
+	--reacc-bg: #dc3545;
+	--card-post-hover-bg: #7cd5d019;
+	--crearpost-bg: #fff;
+	--crearpost-bg-color:#9556cca3;
+	--crearpost-boder: #9556cc;
+	--input-label-bg:#7cd5d043 ;
+	--info-cake-bg:rgba(0, 0, 0, 0.418);
+}
 .img-post{
 	position: relative;
 	bottom: 0%;
@@ -6,8 +15,6 @@
 .img-perfil{
 	width: 30px;
 }
-
-
 .fecha{
 	font-size:9px;
 	text-align: left;
@@ -21,7 +28,6 @@
 .item-comments{
 	text-align: left;
 }
-
 .likes{
 	display: inline-block;
 	width: 25px;
@@ -46,10 +52,8 @@
 	transition: 0.3s;
 }
 .reaccionado{
-	background: #dc3545;
+	background: var(--reacc-bg);
 }
-
-
 
 //------postear-----
 .crearPost{
@@ -87,7 +91,7 @@ input+label{
 	margin:0;
 	//border:solid 1px #7cd5d0;
 	border-radius: 5px ;
-	background-color: #7cd5d043;
+	background-color: var(--input-label-bg);
 	text-align: center;
 	font-family:"Montserrat",sans-serif ;
 }
@@ -104,7 +108,7 @@ input+label{
 	
 }
 .info-cake{
-	background-color: rgba(0, 0, 0, 0.418);
+	background-color: var(--info-cake-bg);
 	backdrop-filter: blur(4px);
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	min-width: 6rem;
