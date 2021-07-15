@@ -50,8 +50,7 @@ export class CreatePost extends React.Component {
         })
         .catch(error => console.log(error))   
 
-		let activar = document.getElementById('post-collapse');
-		activar.hidden=true
+		
 	}
 
 	handleSelect(e) {
@@ -83,8 +82,7 @@ export class CreatePost extends React.Component {
 		}
 
 		reader.readAsDataURL(file)
-		let activar = document.getElementById('post-collapse');
-		activar.hidden=false;
+		
 	}
 
 	getCakes() {
@@ -174,7 +172,7 @@ export class CreatePost extends React.Component {
 									</label>
 								</div>
 								<div className="form-row">
-											<label htmlFor="pastelID" className="text-light">Escoja la ID de su pastel:</label>
+											<label htmlFor="pastelID" className="">Escoja la ID de su pastel:</label>
 											<select className="form-control " id="pastelID" value={this.state.option} placeholder="h" onChange = {this.handleSelect}>
 												{this.countCakes(this.state.pasteles)}
 											</select>

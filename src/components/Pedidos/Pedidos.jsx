@@ -424,7 +424,8 @@ export class Mensaje extends Index{
                 if(response.id != undefined){
                     this.setState({pastel:response.id})
                 }else{
-                    alert("por favor llene todos los campos, de lo contrario el pedido no se realizara con exito")
+                    this.setState({log:'1'})
+                 
                 }
                   
             });
@@ -434,6 +435,7 @@ export class Mensaje extends Index{
     
    
     render(){
+        let mensaje="Por favor llene todos los campos, de lo contrario el pedido no se realizara con exito";
         const f =this.state.log;
         const {getData}= this.props;
         return(
@@ -460,7 +462,8 @@ export class Mensaje extends Index{
                         <div className="modal-content">
                             
                             <div className="modal-body">
-                            {f=='0' ? ( <Formulario datos={this.state}></Formulario>):(<LoginRegister></LoginRegister>) }
+                               
+                            {f=='0' ? ( <Formulario datos={this.state}></Formulario>):(f=='1' ?(<p>{mensaje}</p>):(<LoginRegister></LoginRegister>)) }
                                 
                             </div>
 
@@ -520,13 +523,14 @@ export class Formulario extends React.Component{
             body: form_data
             // body: JSON.stringify(this.state)
         }).then((response) => response.json())
-        .then(response =>{
-            if (response.idpedido!=-1){
-                
-                alert("se posteo correctamente")
+        .then(response =>{console.log(response.idpedido)
+           
+            if (response.idpedido!=undefined){
+               
                 window.location.pathname ="/";    
             }else{
-                alert(" NO se posteo correctamente")
+               
+               <Popup info="Fallas en el pedido por favor vuelva a intentar"></Popup>
             }
             console.log(response)
         });
@@ -602,3 +606,29 @@ export class LoginRegister extends React.Component{
         )
     }
 }
+ export class Popup extends React.Component{
+  render(){
+      let btnMensaje= document.getElementById("mensajePop");
+      btnMensaje.click();
+      return(
+            <div>
+                <button type="button" className="btn-secundario" data-toggle="modal" data-target="#popup" value="popup" data-backdrop="false" data-dismiss="modal"  id="mensajePop">Error!!!</button>
+               
+                
+                    <div className="modal fade" id ="popup">
+                        <section className=" modal-dialog">
+                            <div className=" modal-content">
+                                <div className=" modal-body">
+                                    {this.props.info}
+                                </div>
+                                <div className="modal-footer justify-content-center">
+                                    <button type="button" className="btn-secundario btn-mini" id="btnModal" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+            </div>
+      )
+  }
+ }
