@@ -94,8 +94,7 @@ export class HeaderUpdater extends React.Component {
                                 <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
                                     <ul class ="navbar-nav mr-auto ">
                                     <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Patel</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/social">Social Cake</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
                                     </ul>
                                 </div> 
         
@@ -154,8 +153,8 @@ export class HeaderUpdater extends React.Component {
                                 <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
                                     <ul class ="navbar-nav mr-auto ">
                                     <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Patel</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/social">Social Cake</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/social">Post</a></li>
                                     <li class =" nav-item"><a class="navbarText" href ="/profile">Perfil</a></li>
                                     <li class =" nav-item"><a class="navbarText" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
                                     
