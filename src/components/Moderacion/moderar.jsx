@@ -22,7 +22,7 @@ export class Moderar extends React.Component {
           body:JSON.stringify(this.state)
         };
 
-        fetch('https://dream-cake.herokuapp.com/social/mod_post/' + this.props.datos.id +'/', requestOptions)
+        fetch('http://localhost:8000/social/mod_post/' + this.props.datos.id +'/', requestOptions)
           .then(response => response.json())
           .then(json => this.setState({
             status: !this.state.status

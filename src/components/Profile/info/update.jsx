@@ -32,7 +32,7 @@ export class Update extends React.Component {
 			credentials: "include",
             body: form_data
 		};
-        fetch('https://dream-cake.herokuapp.com/users/api/auth/user/', requestOptions)
+        fetch('http://localhost:8000/users/api/auth/user/', requestOptions)
         .then(res => res.json())
         .then(json => { 
             console.log(json);
@@ -50,7 +50,7 @@ export class Update extends React.Component {
 			},
 			credentials: "include",
 		};
-        fetch('https://dream-cake.herokuapp.com/users/api/auth/user/disable/', requestOptions)
+        fetch('http://localhost:8000/users/api/auth/user/disable/', requestOptions)
         .then(res => res.json())
         .then(json => { 
             // console.log(json);

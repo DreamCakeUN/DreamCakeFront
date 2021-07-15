@@ -196,7 +196,7 @@ export class Index extends React.Component {
     postearPastel() {
         console.log("vamos a postear el pastel");
         console.log(Cookies.get('csrftoken'))
-        fetch('https://dream-cake.herokuapp.com/copiar_pastel/' + this.state.id + '/', {
+        fetch('http://localhost:8000/copiar_pastel/' + this.state.id + '/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -211,7 +211,7 @@ export class Index extends React.Component {
     }
     editarPastel() {
         console.log("vamos a editar el pastel");
-        fetch('https://dream-cake.herokuapp.com/midificar_pastel/' + this.state.id + '/', {
+        fetch('http://localhost:8000/midificar_pastel/' + this.state.id + '/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -542,7 +542,7 @@ export class Mensaje extends Index {
 
 
         if (this.state.user === '') {
-            fetch('https://dream-cake.herokuapp.com/users/api/auth/user/', requestOptions)
+            fetch('http://localhost:8000/users/api/auth/user/', requestOptions)
                 .then((response) => response.json())
                 .then(responseJson => {
                     console.log("estamos comprobando si se inicio una sesion");
@@ -579,7 +579,7 @@ export class Mensaje extends Index {
 
 
         if (this.state.pastel == -1) {
-            fetch('https://dream-cake.herokuapp.com/copiar_pastel/' + this.state.id + '/', {
+            fetch('http://localhost:8000/copiar_pastel/' + this.state.id + '/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -664,7 +664,7 @@ export class Formulario extends React.Component {
     }
 
     loadPedido() {
-        fetch("https://dream-cake.herokuapp.com/pedidos/", { credentials: 'include' })
+        fetch("http://localhost:8000/pedidos/", { credentials: 'include' })
             .then(response => response.json())
             .then(json => (this.setState({ pedidos: json }), this.filtrarPedido())
             )
@@ -686,8 +686,8 @@ export class Formulario extends React.Component {
         console.log(this.state.pedido)
 
         let dir = this.props.origen == 1 ?
-            'https://dream-cake.herokuapp.com/editar_pedido/' + parseInt(this.state.pedido) + '/'
-            : 'https://dream-cake.herokuapp.com/crear_pedido/'
+            'http://localhost:8000/editar_pedido/' + parseInt(this.state.pedido) + '/'
+            : 'http://localhost:8000/crear_pedido/'
         fetch(dir, {
             method: this.props.origen == 1 ? 'PUT' : 'POST',
             headers: {

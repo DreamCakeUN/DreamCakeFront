@@ -22,7 +22,7 @@ export class CommentsList extends React.Component {
 			},
 			credentials: "include",
 		  };
-		  fetch('https://dream-cake.herokuapp.com/social/all_coms/'+ this.props.id + "/", requestOptions)
+		  fetch('http://localhost:8000/social/all_coms/'+ this.props.id + "/", requestOptions)
 			.then(response => response.json())
 			.then(json => this.setState({
 			  comments: json
@@ -56,7 +56,7 @@ export class Comment extends React.Component {
             credentials: "include",
             body:JSON.stringify(this.state)
           };
-          fetch('https://dream-cake.herokuapp.com/social/mod_com/' + this.props.comment.id + '/', requestOptions)
+          fetch('http://localhost:8000/social/mod_com/' + this.props.comment.id + '/', requestOptions)
             .then(response => response.json())
             .then(json => this.setState({
               status: !this.state.status,
@@ -71,7 +71,7 @@ export class Comment extends React.Component {
 		return  (
 			<div className="row">
 				<div className="col-lg-2 col-sm-2 col-2">
-					<img className="img-perfil" src="https://dream-cake.herokuapp.com/media/postImages/321_jbjNKPP.png" alt="perfil" />
+					<img className="img-perfil" src="http://localhost:8000/media/postImages/321_jbjNKPP.png" alt="perfil" />
 				</div>
 				<div className= "col-lg-6 col-sm-6 col-6">
                     <div className="badge badge-light item-comments text-wrap ">

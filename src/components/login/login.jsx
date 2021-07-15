@@ -20,7 +20,7 @@ class Login extends Component {
   };
 
   onSubmitForm = async () => {
-    let response = await fetch('https://dream-cake.herokuapp.com/users/api/auth/login/', {
+    let response = await fetch('http://localhost:8000/users/api/auth/login/', {
       method: 'POST',
       credentials: "include",
       headers: {

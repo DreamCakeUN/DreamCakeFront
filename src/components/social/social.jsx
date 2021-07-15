@@ -8,7 +8,7 @@ import añadir from '../../static/images/anadir.png'
 
 export class Social extends React.Component {
 
-	ws = new WebSocket("ws://dream-cake.herokuapp.com/ws/socialGeneral/")
+	ws = new WebSocket("ws://localhost:8000/ws/socialGeneral/")
 
 	constructor() {
 		super();
@@ -44,7 +44,7 @@ export class Social extends React.Component {
 	}
 
 	requestUser() {
-		fetch('https://dream-cake.herokuapp.com/users/api/auth/user/', {
+		fetch('http://localhost:8000/users/api/auth/user/', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {
@@ -56,7 +56,7 @@ export class Social extends React.Component {
 	}
 
 	loadPosts() {
-		fetch("https://dream-cake.herokuapp.com/social/all_posts/" + this.state.order +this.state.attr + "/" + this.state.count+'/')
+		fetch("http://localhost:8000/social/all_posts/" + this.state.order +this.state.attr + "/" + this.state.count+'/')
 			.then(response => response.json())
 			.then(json => this.setState({
 				posts: json

@@ -63,7 +63,7 @@ export class CreateBanner extends React.Component {
 			body: form_data
 		};
 
-		fetch('https://dream-cake.herokuapp.com/banner/create/', requestOptions)
+		fetch('http://localhost:8000/banner/create/', requestOptions)
 			.then(res => res.json())
 			.then(json => {
 				// this.props.update()

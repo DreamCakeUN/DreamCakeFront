@@ -24,7 +24,7 @@ export class Feed extends React.Component {
 			credentials: "include"
 		};
 
-		fetch('https://dream-cake.herokuapp.com/pasteles/', requestOptions)
+		fetch('http://localhost:8000/pasteles/', requestOptions)
 			.then(res => res.json())
 			.then(json => {
 				this.setState({pasteles: json})

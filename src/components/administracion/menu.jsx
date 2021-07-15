@@ -28,7 +28,7 @@ export class Menu extends React.Component {
 			},
 			credentials: "include",
 		};
-		fetch("https://dream-cake.herokuapp.com/users/api/auth/logout/", requestOptions)
+		fetch("http://localhost:8000/users/api/auth/logout/", requestOptions)
 			.then(response => response.json())
 			.then(json => {
 				window.location.pathname = "/";

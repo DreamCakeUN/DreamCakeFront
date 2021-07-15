@@ -168,7 +168,7 @@ export class Pedidos extends React.Component {
 				'aceptado': valor
 			})
 		};
-		fetch("https://dream-cake.herokuapp.com/aceptar_pedido/" + id + "/", requestOptions)
+		fetch("http://localhost:8000/aceptar_pedido/" + id + "/", requestOptions)
 			.then(response => response.json())
 			.then(json => {
 				if (json.hasOwnProperty('aceptado'))
@@ -189,7 +189,7 @@ export class Pedidos extends React.Component {
 				'estado': valor
 			})
 		};
-		fetch("https://dream-cake.herokuapp.com/estado_pedido/" + id + "/", requestOptions)
+		fetch("http://localhost:8000/estado_pedido/" + id + "/", requestOptions)
 			.then(response => response.json())
 			.then(json => console.log(json))
 			.catch(error => console.log(error));
