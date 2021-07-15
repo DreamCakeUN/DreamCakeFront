@@ -61,7 +61,7 @@ export class Notification extends React.Component {
 	}
 
 	reloadPedidoUser() {
-		this.ws = new WebSocket("ws://localhost:8000ws/pedidoUser/")
+		this.ws = new WebSocket("ws://localhost:8000/ws/pedidoUser/")
 
 
 		this.ws.onopen = evt => {
