@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import logo from '../../static/images/logo.svg';
+import logo from '../../static/images/LOGOFINAL.png';
 import { Login } from "./login";
 
 export class Register extends React.Component {
@@ -31,7 +31,7 @@ export class Register extends React.Component {
             body: JSON.stringify(this.state)
         };
 
-        fetch('http://localhost:8000/users/api/auth/registration/', requestOptions)
+        fetch('https://dream-cake.herokuapp.com/users/api/auth/registration/', requestOptions)
             .then(res => {
                 return res.json()
             })
@@ -43,7 +43,7 @@ export class Register extends React.Component {
 
     login = async () => {
         console.log(this.state)
-        let response = await fetch('http://localhost:8000/users/api/auth/login/', {
+        let response = await fetch('https://dream-cake.herokuapp.com/users/api/auth/login/', {
             method: 'POST',
             credentials: "include",
             headers: {

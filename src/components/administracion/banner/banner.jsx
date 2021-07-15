@@ -45,7 +45,7 @@ export class Banner extends React.Component {
 			},
 			credentials: "include",
 		};
-		fetch("http://localhost:8000/banner/get_all/", requestOptions)
+		fetch("https://dream-cake.herokuapp.com/banner/get_all/", requestOptions)
 			.then(response => response.json())
 			.then(json => this.setState({ banners: json }))
 			.catch(error => console.log(error))
@@ -82,7 +82,7 @@ export class Banner extends React.Component {
 				'status': valor
 			})
 		};
-		fetch("http://localhost:8000/banner/delete/" + id + "/", requestOptions)
+		fetch("https://dream-cake.herokuapp.com/banner/delete/" + id + "/", requestOptions)
 			.then(response => response.json())
 			.then(json => this.getAll())
 			.catch(error => console.log(error));
@@ -131,7 +131,7 @@ export class Banner extends React.Component {
 
 		return (
 			<div>
-				<button onClick={this.modal}>Crear Banner</button>
+				<button className="btn-principal btn-mediano" onClick={this.modal}>Crear Banner</button>
 				<CreateBanner open={this.state.open} onClose={this.modal}></CreateBanner>
 				{table}
 			</div>

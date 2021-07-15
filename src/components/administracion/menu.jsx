@@ -28,7 +28,7 @@ export class Menu extends React.Component {
 			},
 			credentials: "include",
 		};
-		fetch("http://localhost:8000/users/api/auth/logout/", requestOptions)
+		fetch("https://dream-cake.herokuapp.com/users/api/auth/logout/", requestOptions)
 			.then(response => response.json())
 			.then(json => {
 				window.location.pathname = "/";
@@ -40,11 +40,31 @@ export class Menu extends React.Component {
 		return (
 			<div class="sidebar">
 				<div className="btn-group-vertical">
-					<button class="active" className="btn btn-options " href="/">Home</button>
-					<button name='0' className="btn btn-options " onClick={this.setCurrent} href="#pedidos">Pedidos</button>
-					<button name='1' className="btn btn-options " onClick={this.setCurrent} href="#banner">Banner</button>
-					<button name='2' className="btn btn-options " onClick={this.setCurrent} href="#mod">Moderadores</button>
-					<button name='3' className="btn btn-options " onClick={this.cerrarSesion} href="#logout">Cerrar sesión</button>
+				<br></br>
+				<br></br>
+					<button class="active" className="btn-secundario "href="/">Home</button>
+					<button name='0' className="btn-secundario " onClick={this.setCurrent} href="#pedidos">Pedidos</button>
+					<button name='1' className="btn-secundario" onClick={this.setCurrent} href="#banner">Banner</button>
+					<button name='2' className="btn-secundario " onClick={this.setCurrent} href="#mod">Moderadores</button>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					
+					<button name='3' className="btn-principal " onClick={this.cerrarSesion} href="#logout">Cerrar sesión</button>
 				</div>
 			</div>
 		);

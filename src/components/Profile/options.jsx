@@ -19,7 +19,7 @@ export class Options extends React.Component {
             },
             credentials: "include",
         };
-        fetch('http://localhost:8000/users/api/auth/logout/', requestOptions)
+        fetch('https://dream-cake.herokuapp.com/users/api/auth/logout/', requestOptions)
         .then(res => res.json())
         .then(json =>{
             window.location.pathname = "/"

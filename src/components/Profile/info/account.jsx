@@ -17,7 +17,7 @@ export class Account extends React.Component {
   },
   credentials: "include",
 };
-    fetch('http://localhost:8000/users/api/auth/user/disable/', requestOptions)
+    fetch('https://dream-cake.herokuapp.com/users/api/auth/user/disable/', requestOptions)
     .then(res => res.json())
     .then(json => { 
         // console.log(json);

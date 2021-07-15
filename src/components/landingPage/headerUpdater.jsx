@@ -5,7 +5,7 @@ import { Notifications } from "./notifications/notifications"
 import { Register } from '../login/register';
 import { Login } from '../login/login';
 import Cookies from 'js-cookie';
-import logo from '../../static/images/logo3.svg';
+import logo from '../../static/images/LOGOFINALBANNER.png';
 
 export class HeaderUpdater extends React.Component {
     constructor() {
@@ -22,7 +22,7 @@ export class HeaderUpdater extends React.Component {
     componentDidMount(e) {
         
 
-        fetch('http://localhost:8000/users/api/auth/user/', {
+        fetch('https://dream-cake.herokuapp.com/users/api/auth/user/', {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -65,7 +65,7 @@ export class HeaderUpdater extends React.Component {
                 likes:this.state.like+1
             })
         };
-        fetch('http://localhost:8000/users/api/auth/logout/', requestOptions)
+        fetch('https://dream-cake.herokuapp.com/users/api/auth/logout/', requestOptions)
         .then(res => res.json())
         .then(json =>{
             window.location.pathname = "/"

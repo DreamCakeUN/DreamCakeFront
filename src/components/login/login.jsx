@@ -2,7 +2,7 @@ import './style.scss';
 import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import logo from '../../static/images/logo.svg';
+import logo from '../../static/images/LOGOFINAL.png';
 
 class Login extends Component {
 
@@ -20,7 +20,7 @@ class Login extends Component {
   };
 
   onSubmitForm = async () => {
-    let response = await fetch('http://localhost:8000/users/api/auth/login/', {
+    let response = await fetch('https://dream-cake.herokuapp.com/users/api/auth/login/', {
       method: 'POST',
       credentials: "include",
       headers: {

@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 
 export class Mod extends React.Component {
 
-	ws = new WebSocket("ws://localhost:8000/ws/socialGeneral/")
+	ws = new WebSocket("ws://dream-cake.herokuapp.com/ws/socialGeneral/")
 
 	constructor() {
 		super();
@@ -38,7 +38,7 @@ export class Mod extends React.Component {
 			},
 			credentials: "include",
 		};
-		fetch('http://localhost:8000/social/all_posts/', requestOptions)
+		fetch('https://dream-cake.herokuapp.com/social/all_posts/', requestOptions)
 			.then(response => response.json())
 			.then(json => this.setState({
 				posts: json
@@ -47,7 +47,7 @@ export class Mod extends React.Component {
 	}
 
 	requestUser() {
-		fetch('http://localhost:8000/users/api/auth/user/', {
+		fetch('https://dream-cake.herokuapp.com/users/api/auth/user/', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {

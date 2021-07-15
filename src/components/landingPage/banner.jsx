@@ -18,7 +18,7 @@ export class Banner extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/banner/get_all/')
+        fetch('https://dream-cake.herokuapp.com/banner/get_all/')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ promos: data })
@@ -58,8 +58,10 @@ export class Banner extends React.Component {
                                     
 
                                     <div className="carousel-caption">
-                                        <div className="text-center" >
+                                        <div className="carousel-text text-center" >
                                             <h2>Crea tu Pastel</h2>
+                                            <p>En “Dream Cake” creamos deliciosos postres y pasteles con exquisitas recetas, ingredientes de la más alta calidad y con la más fina elaboración, consiguiendo así que nuestros productos sean una
+                                            delicia para los ojos y un capricho para el paladar, solo tienes que segui los siguientes pasos! </p>
                                             <p>1.) ¡Registrate! </p>
                                             <p>2.) ¡Elige la crema! </p>
                                             <p>3.) ¡Selecciona el tipo de torta! </p>
@@ -67,7 +69,7 @@ export class Banner extends React.Component {
                                             <p>5.) ¡Decoralo a tu antojo! </p>
 
 
-                                            <button type="button" className="btn-principal mx-auto d-md-block" id="comenzar" onClick={this.realizarPedido} > COMENZAR </button>
+                                            <button type="button" className="btn-principal btn-mediano mx-auto d-md-block" id="comenzar" onClick={this.realizarPedido} > COMENZAR </button>
 
                                            {/*  <div className="carousel-caption d-none d-md-block" >
                                                 <h3>Conoce nuestras promociones</h3>

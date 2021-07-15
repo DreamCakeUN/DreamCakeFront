@@ -47,7 +47,7 @@ export class Social extends React.Component {
 
     componentDidMount = () => {
 
-        fetch('http://localhost:8000/social/all_posts/-likes/3/', { method: 'GET' })
+        fetch('https://dream-cake.herokuapp.com/social/all_posts/-likes/3/', { method: 'GET' })
             .then((response) => response.json())
             .then(responseJson => { this.setState({ data: responseJson }) }
             );
@@ -64,7 +64,7 @@ export class Social extends React.Component {
                     
                     
                     <div className="pastelPadding row justify-content-center">
-                        <a href="http://localhost:3000/social">
+                        <a href="/social">
                             <button className="btn-principal" >Ver mas</button>
                         </a>
                     </div>
