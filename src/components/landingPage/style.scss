@@ -1,9 +1,11 @@
 :root{
     --color-principal:#733426;;
-    --color-secundario:#7334268f;
+    --color-secundario:#222222;
     --color-boton:#cd6904;
     --color-outline:#e85a10;
     --color-boton-hoover:#cd6904c9;
+    --color-fondo:#b4986b;
+    --color-borde: #733426;
 }
 .btn-principal{
     color:white ;
@@ -34,7 +36,7 @@
 }
 .tituloPrincipal
 {
-    color:#e85a10;
+    color:var(--color-outline);
     font-weight: bold;
 }
 .btn-mediano{
@@ -52,12 +54,14 @@
     color: #7cd5d1 limportan;
     border-color:#7cd5d1 limportan;
 }
+
+
 .social_app{
     display:block;
     background: #e9e7ea;
     content: center;
 }
-.tittle >div{
+.tittle {
     color:var(--color-principal);
     vertical-align: middle;
     text-shadow: 2px 2px 5px rgb(0, 0, 0);

@@ -1,5 +1,4 @@
 :root{
-    --fondo: white;
     --raya: #9556CC;
     --textNombre: #9556CC;
     --fontFamily: open sans, sans-serif;
@@ -12,12 +11,13 @@
     border: none;
 }
  .user_data{
-    background-color: var(--fondo) ;
+    background-color: var(--color-fondo);
     background-size: 100% 100%;
     padding-top: 10px;
     padding-bottom: 5px;
-    border-bottom: solid;
-    border-bottom-color: var(--color-outline);
+    border: solid;
+    border-color: var(--color-borde);
+    
  }
 
 .div_image{
@@ -31,10 +31,13 @@
 }
 
 .user-name{
-    color: var(--textNombre);
+    color:var(--color-principal);;
     font-size: xx-large;
     font-weight: bold;
     font-family: var(--fontFamily);
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
 }
 
 .img_profile{
@@ -48,6 +51,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 // Options
@@ -73,12 +77,17 @@
 .title{
     font-weight: bold;
     font-family: var(--fontFamily);
+    font-size: 19px;
+    color: var(--color-principal);
 }
 
 .field{
-    height: 20px;
+    
     text-justify: center;
     font-family: var(--fontFamily);
+    font-size: 18px;
+    color: black;
+    
 }
 
 .btn-update{
