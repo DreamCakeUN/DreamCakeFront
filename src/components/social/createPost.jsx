@@ -213,7 +213,9 @@ export class CreatePost extends React.Component {
 					<label className="text-wrap" for="pedido" onClick={this.getCakes}>
 						Aun no tienes ningun pedido, empieza ahora!!
 						<br />
-						<button className="btn-secundario" id="pedido">Crear Pedido</button>
+						<a href="crearPastel/">
+							<button className="btn-secundario" id="pedido">Crear Pedido</button>
+						</a>	
 					</label>
 				</div>
 			)
