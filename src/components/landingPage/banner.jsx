@@ -67,7 +67,7 @@ export class Banner extends React.Component {
                                             <p>5.) ¡Decoralo a tu antojo! </p>
 
 
-                                            <button type="button" className="btn-start mx-auto d-md-block" id="comenzar" onClick={this.realizarPedido} > COMENZAR </button>
+                                            <button type="button" className="btn btn-principal mx-auto d-md-block" id="comenzar" onClick={this.realizarPedido} > COMENZAR </button>
 
                                            {/*  <div className="carousel-caption d-none d-md-block" >
                                                 <h3>Conoce nuestras promociones</h3>

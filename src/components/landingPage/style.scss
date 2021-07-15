@@ -1,10 +1,21 @@
 :root{
-    --color-principal:#4f3316;
-    --color-secundario:#d7bc8e;
-    --color-boton:#cd6804;
+    --color-principal:#733426;;
+    --color-secundario:#7334268f;
+    --color-boton:#cd6904;
     --color-outline:#e85a10;
+    --color-boton-hoover:#cd6904c9;
 }
-
+.btn-principal{
+    color:white;
+    background-color: var(--color-boton);
+    border-radius: 5px;
+}
+.btn-secundario{
+    color:white;
+    background-color: white;
+    border-radius: 5px;
+    border:solid 1px var(--color-outline)
+}
 .btn-pedidos{
     color: #7cd5d1 limportan;
     border-color:#7cd5d1 limportan;
