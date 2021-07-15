@@ -19,9 +19,9 @@ export class Estadisticas extends React.Component {
   }
 
   componentDidMount = async () => {
-    let users = await fetch("http://localhost:8000/stats/users/");
-    let interactions = await fetch("http://localhost:8000/stats/interactions/");
-    let post = await fetch("http://localhost:8000/stats/posts/");
+    let users = await fetch("https://dream-cake.herokuapp.com/stats/users/");
+    let interactions = await fetch("https://dream-cake.herokuapp.com/stats/interactions/");
+    let post = await fetch("https://dream-cake.herokuapp.com/stats/posts/");
 
     let usersJS = await users.text();
     let interactionsJS = await interactions.text()

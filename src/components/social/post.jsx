@@ -40,7 +40,7 @@ export class Post extends React.Component {
 			credentials: "include"
 		};
 
-		fetch('http://localhost:8000/pastel_pedido/'+this.props.post.pastel+'/', requestOptions)
+		fetch('https://dream-cake.herokuapp.com/pastel_pedido/'+this.props.post.pastel+'/', requestOptions)
 			.then(res => res.json())
 			.then(json => {
 				this.setState({cake: json});
@@ -71,7 +71,7 @@ export class Post extends React.Component {
 				post : this.props.post.id
 			})
         };
-		fetch('http://localhost:8000/social/create_com/', requestOptions)
+		fetch('https://dream-cake.herokuapp.comsocial/create_com/', requestOptions)
         .then(res => res.json())
         .then(json => {
 			this.state.comments.push(json);
@@ -140,7 +140,7 @@ export class Post extends React.Component {
 			},
             credentials: "include",
         };
-		fetch('http://localhost:8000/guardar_pastel/' + id + '/', requestOptions)
+		fetch('https://dream-cake.herokuapp.com/guardar_pastel/' + id + '/', requestOptions)
         .then(res => res.json())
         .then(json => {
 			// alert(JSON.stringify(json))
@@ -150,7 +150,7 @@ export class Post extends React.Component {
 	}
 	
 	cargarComentarios(){
-		fetch("http://localhost:8000/social/comments/" + this.props.post.id+'/')
+		fetch("https://dream-cake.herokuapp.com/social/comments/" + this.props.post.id+'/')
 			.then(response => response.json())
 			.then(json => this.setState({
 				comments: json
@@ -172,7 +172,7 @@ export class Post extends React.Component {
 						likes:this.state.like+1
 					})
 				};
-				fetch('http://localhost:8000/social/like/'+ this.props.post.id + "/", requestOptions)
+				fetch('https://dream-cake.herokuapp.com/social/like/'+ this.props.post.id + "/", requestOptions)
 				.then(res => res.json())
 				.then(json =>this.setState({like:json.likes}))
 				

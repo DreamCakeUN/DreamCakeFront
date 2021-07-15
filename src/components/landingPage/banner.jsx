@@ -18,7 +18,7 @@ export class Banner extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/banner/get_all/')
+        fetch('https://dream-cake.herokuapp.com/banner/get_all/')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ promos: data })

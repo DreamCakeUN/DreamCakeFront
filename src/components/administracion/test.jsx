@@ -6,7 +6,7 @@ import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component';
 
 export class Test extends React.Component {
-	ws = new WebSocket("ws://localhost:8000/ws/")
+	ws = new WebSocket("ws://dream-cake.herokuapp.com/ws/")
 
 	constructor(props) {
 		super(props);

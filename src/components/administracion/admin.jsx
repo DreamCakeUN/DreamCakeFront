@@ -16,7 +16,7 @@ import Cookies from 'js-cookie';
 
 export class Admin extends React.Component {
 
-  ws = new WebSocket("ws://localhost:8000/ws/pedido/")
+  ws = new WebSocket("ws://dream-cake.herokuapp.com/ws/pedido/")
 
   constructor(props) {
     super(props)
@@ -24,7 +24,7 @@ export class Admin extends React.Component {
       pedidos: [{
         idpedido: 1,
         fecha_pedido: "2021-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: false,
@@ -37,7 +37,7 @@ export class Admin extends React.Component {
       {
         idpedido: 3,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -50,7 +50,7 @@ export class Admin extends React.Component {
       {
         idpedido: 4,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -63,7 +63,7 @@ export class Admin extends React.Component {
       {
         idpedido: 5,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -76,7 +76,7 @@ export class Admin extends React.Component {
       {
         idpedido: 6,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -89,7 +89,7 @@ export class Admin extends React.Component {
       {
         idpedido: 7,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -102,7 +102,7 @@ export class Admin extends React.Component {
       {
         idpedido: 8,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -115,7 +115,7 @@ export class Admin extends React.Component {
       {
         idpedido: 9,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -128,7 +128,7 @@ export class Admin extends React.Component {
       {
         idpedido: 10,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -141,7 +141,7 @@ export class Admin extends React.Component {
       {
         idpedido: 11,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -154,7 +154,7 @@ export class Admin extends React.Component {
       {
         idpedido: 12,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -167,7 +167,7 @@ export class Admin extends React.Component {
       {
         idpedido: 13,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -180,7 +180,7 @@ export class Admin extends React.Component {
       {
         idpedido: 14,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -193,7 +193,7 @@ export class Admin extends React.Component {
       {
         idpedido: 15,
         fecha_pedido: "2020-Jun-24 ",
-        foto: "http://localhost:8000/media/pedido/a_8_69UKEp6.png",
+        foto: "https://dream-cake.herokuapp.com/media/pedido/a_8_69UKEp6.png",
         direccion: "asdfa",
         costo: 2.0,
         aceptado: true,
@@ -219,7 +219,7 @@ export class Admin extends React.Component {
   }
 
   requestUser() {
-		fetch('http://localhost:8000/users/api/auth/user/', {
+		fetch('https://dream-cake.herokuapp.com/users/api/auth/user/', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {
@@ -265,7 +265,7 @@ export class Admin extends React.Component {
       },
       credentials: "include",
     };
-    fetch("http://localhost:8000/all_pedidos/" + this.state.atr + "/", requestOptions)
+    fetch("https://dream-cake.herokuapp.com/all_pedidos/" + this.state.atr + "/", requestOptions)
       .then(response => response.json())
       .then(json => this.setState({
         pedidos: json
@@ -274,7 +274,7 @@ export class Admin extends React.Component {
   }
 
   reload() {
-    this.ws = new WebSocket("ws://localhost:8000/ws/pedido/")
+    this.ws = new WebSocket("ws://dream-cake.herokuapp.com/ws/pedido/")
 
     this.ws.onopen = evt => {
       console.log("open");
