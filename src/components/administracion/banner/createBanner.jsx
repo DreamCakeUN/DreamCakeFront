@@ -90,7 +90,7 @@ export class CreateBanner extends React.Component {
 			<div>
 				<form onSubmit={this.handleSubmit} className="container">
 					<div className="form-group">
-						<label for="file"><span>Imagen</span></label>
+						<label className="btn-secundario btn-mini" for="file"><span>Imagen</span></label>
 						<input type="file" className="col-sm " id="file" onChange={this.handleImageChange} accept="image/*"></input>
 					</div>
 
@@ -98,11 +98,17 @@ export class CreateBanner extends React.Component {
 					<input name="titulo" type="text" placeholder="Titulo" onChange={this.handleChange} ></input>
 					<input name="texto" type="text" placeholder="Texto" onChange={this.handleChange}></input>
 					<input name="abstract" type="text" placeholder="Abstract" onChange={this.handleChange}></input>
-					<input name="status" type="checkbox" placeholder="status" onChange={this.handleChange}></input>
-
-					<button type="submit" value="Crear">Crear</button>
+				
+						<label for="estado">Estado activo</label>
+						
+							<input id="estado" name="status" type="checkbox" placeholder="status" onChange={this.handleChange}></input>
+						
+					
+					<div className="col-4">
+						<button className="btn-principal btn-mediano" type="submit" value="Crear">Crear</button>
+					</div>
 				</form>
-				<button onClick={this.props.onClose}>Salir</button>
+				<button className="btn-secundario btn-mini" onClick={this.props.onClose}>Salir</button>
 
 			</div>
 

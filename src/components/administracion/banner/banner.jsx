@@ -131,7 +131,7 @@ export class Banner extends React.Component {
 
 		return (
 			<div>
-				<button onClick={this.modal}>Crear Banner</button>
+				<button className="btn-principal btn-mediano" onClick={this.modal}>Crear Banner</button>
 				<CreateBanner open={this.state.open} onClose={this.modal}></CreateBanner>
 				{table}
 			</div>
