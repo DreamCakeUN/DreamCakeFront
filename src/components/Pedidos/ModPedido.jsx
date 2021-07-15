@@ -309,8 +309,8 @@ export class Index extends React.Component {
         return (
 
 
-            <div className="container row d-flex f-wrap justify-content-center ">
-
+            <div className ="pastelPadding container" >
+            <div className="row  justify-content-center ">
 
                 <div className="opciones col-lg-3  col-sm-6 ">
                     <div style={{ margin: 5 + 'px' }}>
@@ -403,7 +403,7 @@ export class Index extends React.Component {
                 <div className="boxLoader" id="boxLoader">
                     <div className="loader"></div>
                 </div>
-
+                </div>                      
             </div>
 
 
