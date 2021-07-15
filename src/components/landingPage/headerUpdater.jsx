@@ -5,7 +5,7 @@ import { Notifications } from "./notifications/notifications"
 import { Register } from '../login/register';
 import { Login } from '../login/login';
 import Cookies from 'js-cookie';
-import logo from '../../static/images/logo3.svg';
+import logo from '../../static/images/LOGOFINALBANNER.png';
 
 export class HeaderUpdater extends React.Component {
     constructor() {

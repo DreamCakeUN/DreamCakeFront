@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import logo from '../../static/images/logo.svg';
+import logo from '../../static/images/LOGOFINAL.png';
 import { Login } from "./login";
 
 export class Register extends React.Component {
