@@ -93,9 +93,9 @@ export class HeaderUpdater extends React.Component {
                                 </button>
                                 <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
                                     <ul class ="navbar-nav mr-auto ">
-                                    <li class =" nav-item"><a class="nav-link" href ="/">Inicio</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/crearPastel/">Crear Patel</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/social">Social Cake</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Patel</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/social">Social Cake</a></li>
                                     </ul>
                                 </div> 
         
