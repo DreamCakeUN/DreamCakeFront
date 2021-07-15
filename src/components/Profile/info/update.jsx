@@ -10,7 +10,7 @@ export class Update extends React.Component {
 
         this.state = {
             full_name: this.props.datos.full_name,
-            foto: this.props.datos.foto
+            foto: ''
         };
 
         this.onSubmitForm = this.onSubmitForm.bind(this);
@@ -36,7 +36,7 @@ export class Update extends React.Component {
         .then(res => res.json())
         .then(json => { 
             console.log(json);
-            window.location.pathname ="/profile";
+            window.location.pathname ="/profile"; 
         })
         .catch(error => console.log(error));
     }
@@ -55,7 +55,7 @@ export class Update extends React.Component {
         .then(json => { 
             // console.log(json);
             window.location.pathname ="/";
-            // window.location.reload()
+            window.location.reload()
         })
         .catch(error => console.log(error));
     }
@@ -65,8 +65,6 @@ export class Update extends React.Component {
         
         return(
             <form className ="form">
-                {console.log(this.state)}
-                { console.log(this.props)}
                 <div className=" form-group">
                     <div className="update form-group">
                         <label for="update-nombre"> Nombre </label>
@@ -77,7 +75,7 @@ export class Update extends React.Component {
                     <label for="update-photo"  className=" btn-secundario">
                         Escoger foto <img className="foto" src={foto}/>
                     </label>
-                    <input type ="file" className="update-photo"  id="update-photo" onChange={(e)=>this.setState({foto:e})} accept="image/*"></input>
+                    <input type ="file" className="update-photo"  id="update-photo" onChange={(e)=>this.setState({foto:e.target.files[0]})} accept="image/*"></input>
                     <div id="draw"></div>
                 </div>
                     
