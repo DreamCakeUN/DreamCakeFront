@@ -157,7 +157,7 @@ export class CreatePost extends React.Component {
 			
 			return (
 				
-				<div className="container row crearPost justify-content-start" >
+				<div className="container  crearPost justify-content-start" >
 					
 					<div className="col-lg-3">
 						<button className="btn-principal " type ="button" data-toggle="collapse" data-target='#form-post' aria-expanded="false" aria-controls="">+ Postear pedido</button>

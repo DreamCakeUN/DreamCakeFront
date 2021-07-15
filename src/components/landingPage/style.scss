@@ -190,18 +190,20 @@
 .carousel-caption{
     backdrop-filter: blur(4px);
     background-color:rgba(0, 0, 0, 0.27);
-    position:absolute;
     top:0;
     max-width: 70%;
-    height: 100%;
-    margin:0 10%;   
+    height: 70%;
+    margin:auto;   
     align-items: center;
-    margin-top: 310px;
 
     
 }
 .carousel-text{
-    font-size: 18px;
+   
+}
+.about-dreamCake{
+    width: 70%;
+    margin:auto;
 }
 .carousel-banner{
     margin-top:6.5rem;
