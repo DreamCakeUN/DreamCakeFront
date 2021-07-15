@@ -174,7 +174,7 @@ export  class Index extends React.Component {
         return (
             
 
-            <div className ="container">
+            <div className ="pastelPadding container" >
                 <div className="row  justify-content-center ">
                                    
                     <div className ="opciones col-lg-4  col-sm-6 ">

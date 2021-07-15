@@ -69,24 +69,24 @@ class Login extends Component {
 
     return (
      <div className="modal fade" id ="login">
-        <section className="modal-dialog" >
-        <div className="modal-content">
-          <div className="modal-body ">
+        <section className=" modal-dialog">
+        <div className=" modal-content">
+          <div className=" modal-body ">
             
 
             <div className="modal-header row justify-content-center">
               <img src={logo} className=" row img-logo col-3" />
             </div>
 
-            <label htmlFor="correo" className ="btn">Correo:</label>
-            <input id="correo"className="form-control " name="email" type="email" value={this.state.email} onChange={this.onInputchange} />
+            <label htmlFor="correo" className ="modalText">Correo:</label>
+            <input id="correo"className="form-control " placeholder="Correo" name="email" type="email" value={this.state.email} onChange={this.onInputchange} />
             
-            <label htmlFor="contraseña" className="btn">Contraseña:</label>
-            <input className="form-control"  id="contraseña" name="password" type="password" value={this.state.password} onChange={this.onInputchange} />
+            <label htmlFor="contraseña" className="modalText">Contraseña:</label>
+            <input id="correo" className="form-control"placeholder="Contraseña" name="password" type="password" value={this.state.password} onChange={this.onInputchange} />
             <br />
-            <button className="btn btn-primary col-12" onClick={this.onSubmitForm} >Continuar</button>
+            <button className="btn-principal col-12" onClick={this.onSubmitForm} >Continuar</button>
             
-            <div className="btn">
+            {/*<div className="btn">
               <GoogleLogin
                 clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
                 buttonText="Iniciar con Google"
@@ -94,8 +94,8 @@ class Login extends Component {
                 onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
               />
-            </div>
-            <div className="btn">
+          </div>
+            {/*<div className="btn">
               <FacebookLogin
                 appId="942968703190705"
                 autoLoad={false}
@@ -105,9 +105,11 @@ class Login extends Component {
                 render={renderProps => (
                   <button className="btn btn-outline-primary"  onClick={renderProps.onClick}>Facebook</button>
                 )} />
-            </div>
+                
+            </div>*/}
+
               <div className="modal-footer justify-content-center">
-                 <button type="button" className="btn btn-outline-info" id="btnModal" data-dismiss="modal">Cancelar</button>
+                 <button type="button" className="btn-secundario btn-mini" id="btnModal" data-dismiss="modal">Cancelar</button>
               </div>
           </div>
         </div>

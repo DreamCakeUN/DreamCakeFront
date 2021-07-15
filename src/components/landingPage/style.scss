@@ -1,9 +1,11 @@
 :root{
     --color-principal:#733426;;
-    --color-secundario:#7334268f;
+    --color-secundario:#222222;
     --color-boton:#cd6904;
     --color-outline:#e85a10;
     --color-boton-hoover:#cd6904c9;
+    --color-fondo:#b4986b;
+    --color-borde: #733426;
 }
 .btn-principal{
     color:white ;
@@ -52,7 +54,7 @@
 }
 .tituloPrincipal
 {
-    color:#e85a10;
+    color:var(--color-outline);
     font-weight: bold;
 }
 .btn-mediano{
@@ -70,12 +72,14 @@
     color: #7cd5d1 limportan;
     border-color:#7cd5d1 limportan;
 }
+
+
 .social_app{
     display:block;
     background: #e9e7ea;
     content: center;
 }
-.tittle >div{
+.tittle {
     color:var(--color-principal);
     vertical-align: middle;
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
@@ -107,6 +111,7 @@
     color:white; 
     font-family: "Work Sans", sans-serif;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 .footer-text{
     display: block;
@@ -114,12 +119,16 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    color: #f1f1f1;
+    color: #c4bdbd;
     margin-top: 0;
     margin-bottom: 1.3em;
     font-family: "Work Sans",sans-serif;
     line-height: 1.6;
     font-size: 100%;
+}
+.footer-text:hover{
+    text-decoration: none;
+    color:white
 }
 .hr-footer{
     width: 100%;
@@ -229,6 +238,23 @@
     background-position: center;
     opacity: 0.8;
     // background-image: url("./cake3.png");
+}
+.navbarText{
+    font-weight: bold;
+    color: #c9c0c0;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    display: block;
+    padding: .5rem 1rem;
+}
+.navbarText:hover{
+    font-weight: bold;
+    color: #ffffff;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
 }
 
 

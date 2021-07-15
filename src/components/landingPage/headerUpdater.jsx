@@ -83,7 +83,7 @@ export class HeaderUpdater extends React.Component {
         if (this.state.userInfo == null || this.state.userInfo.hasOwnProperty('detail')) {
             return (
                <div>
-                    <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around " >
+                    <nav class="navbar   jumbotron-header navbar-expand-md fixed-top justify-content-around " >
                         <a class = "navbar-brand" href = "/">
                                     <img class="img-fluid rounded-circle header-logo" src={logo} alt="logo DreamCake"/>
                         </a>
@@ -93,9 +93,9 @@ export class HeaderUpdater extends React.Component {
                                 </button>
                                 <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
                                     <ul class ="navbar-nav mr-auto ">
-                                    <li class =" nav-item"><a class="nav-link" href ="/">Inicio</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/crearPastel/">Crear Patel</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/social">Social Cake</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Patel</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/social">Social Cake</a></li>
                                     </ul>
                                 </div> 
         
@@ -141,7 +141,7 @@ export class HeaderUpdater extends React.Component {
 
 
 
-                        <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around " >
+                        <nav class="navbar navbar-light  jumbotron-header navbar-expand-md fixed-top justify-content-around " >
                             <a class = "navbar-brand" href = "./">
                                 <img class="img-fluid rounded-circle header-logo" src={logo} alt="one piece"/>
                             </a>
@@ -153,11 +153,11 @@ export class HeaderUpdater extends React.Component {
                                 </button>
                                 <div class = "collapse navbar-collapse" id ="navbarSupportedContend">
                                     <ul class ="navbar-nav mr-auto ">
-                                    <li class =" nav-item"><a class="nav-link" href ="/">Inicio</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/crearPastel/">Crear Patel</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/social">Social Cake</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href ="/profile">Perfil</a></li>
-                                    <li class =" nav-item"><a class="nav-link" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Patel</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/social">Social Cake</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href ="/profile">Perfil</a></li>
+                                    <li class =" nav-item"><a class="navbarText" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
                                     
                                     {/* <li class =" nav-item "><a class="nav-link" href ="./about.html">About</a></li> */}
                                     </ul>

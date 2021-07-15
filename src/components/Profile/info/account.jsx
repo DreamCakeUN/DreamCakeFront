@@ -30,21 +30,41 @@ export class Account extends React.Component {
 
   render() {
     return (
-      <div className="div-account">
-        <label className="title">Nombre</label>
-        <label className="field" >{this.props.datos.full_name == "" ? 'Sin nombre' : this.props.datos.full_name}</label>
-        
-        <label className="title">Correo</label>
-        <label className="field" >{this.props.datos.email}</label>
-        
-        <label className="title">Último inicio</label>
-        <label className="field">{dateFormat(this.props.datos.last_login, "mm/dd/yyyy")}</label>
-        
-        <label className="title">Número de Pasteles Creados</label>
-        <label className="field" >{this.props.datos.pasteles.length}</label>
+      <div className="row">
+        <div class="col-8">
 
+        <label className="title">Nombre:  </label>
+        <label className="field" > {this.props.datos.full_name == " " ? ' Sin nombre' : this.props.datos.full_name}.</label>
+        <br></br>
+        <br></br>
+        <label className="title">Correo: </label>
+        <label className="field" > {this.props.datos.email}.</label>
+        <br></br>
+        <br></br>
+        <label className="title">Último inicio: </label>
+        <label className="field">  {dateFormat(this.props.datos.last_login, " mm/dd/yyyy")}.</label>
+        <br></br>
+        <br></br>
+        <label className="title">Número de Pasteles Creados: </label>
+        <label className="field" > {this.props.datos.pasteles.length}.</label>
+        <br></br>
+        <br></br>
+        </div>
+
+        <div class="col-4">
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <button type="button"  href="#update" className="btn-principal" style={{ width: 11 + 'em' }} data-toggle="modal">Actualizar Datos</button>
         <button  type="button "className="   btn-secundario" style={{ width: 11 + 'em' }} onClick={this.deleteUser}>Eliminar Cuenta</button>
+        </div>
 
         <div className="modal fade" id="update">
           <div className="modal-dialog">
