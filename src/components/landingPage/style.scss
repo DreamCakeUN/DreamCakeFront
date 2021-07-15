@@ -15,11 +15,14 @@
     min-width: 10rem;
     max-width: 100%;
     margin:5px auto;
+    font-weight: bold;
 }
 .btn-secundario{
     background: transparent;
     border-radius: 5px;
     border:solid 1px var(--color-outline);
+    color: var(--color-outline);
+    font-weight: bold;
     padding:10px 15px;
     width: 100%;
     min-width: 10rem;
@@ -27,7 +30,11 @@
     margin:5px auto;
 
 }
-
+.tituloPrincipal
+{
+    color:#e85a10;
+    font-weight: bold;
+}
 .btn-mediano{
     width: 50%;
 }
