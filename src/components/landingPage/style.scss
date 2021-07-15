@@ -1,5 +1,8 @@
 :root{
-    --color-principal:#7cd5d1;
+    --color-principal:#4f3316;
+    --color-secundario:#d7bc8e;
+    --color-boton:#cd6804;
+    --color-outline:#e85a10;
 }
 
 .btn-pedidos{
@@ -90,10 +93,6 @@
     padding: 1px;
     width: 63px;
     margin:0 auto;
-  }
-.img-carousel{
-    padding: 1px;
-    width: 200px;
 }
 
 .carousel-caption{
@@ -108,7 +107,6 @@
  }
 .carousel-banner{
     margin-top:6.5rem;
-    height: 30rem;
     background:rgb(0, 0, 0);
     color: white;
     background-position:center;

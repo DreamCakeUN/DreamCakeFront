@@ -10,7 +10,7 @@ export class Update extends React.Component {
 
         this.state = {
             full_name: this.props.datos.full_name,
-            foto: ''
+            foto: this.props.datos.foto
         };
 
         this.onSubmitForm = this.onSubmitForm.bind(this);
@@ -65,6 +65,7 @@ export class Update extends React.Component {
         
         return(
             <form className ="form">
+                {console.log(this.state)}
                 { console.log(this.props)}
                 <div className=" form-group">
                     <div className="update form-group">
@@ -74,10 +75,9 @@ export class Update extends React.Component {
                 </div>
                 <div className="form-group justify-content-center">
                     <label for="update-photo"  className=" form-control btn btn-outline-info">
-                        <img className="foto" src={foto}/>
-								Escoger foto
+                        Escoger foto <img className="foto" src={foto}/>
                     </label>
-                    <input type ="file" className="update-photo"  id="update-photo" onChange={(e)=>this.setState({foto:e.target.files[0]})} accept="image/*"></input>
+                    <input type ="file" className="update-photo"  id="update-photo" onChange={(e)=>this.setState({foto:e})} accept="image/*"></input>
                     <div id="draw"></div>
                 </div>
                     
