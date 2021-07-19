@@ -174,12 +174,14 @@
     position: absolute;
     top: 5rem;
     right:7rem;
-    background-color:rgba(0, 0, 0, 0.27);
+    background-color:rgba(0, 0, 0, 0.55);
     color: white;
     border:solid 1px var(--color-outline);
     border-radius: 10px;
     backdrop-filter: blur(10px);
     transition: 0.8s;
+    max-height: calc(100vh - 6.5rem );
+    max-width: calc(100vh - 7.5rem );
 }
 
 
@@ -193,7 +195,7 @@
     margin:0 auto;
 }
 .text-container{
-    font-size: 1vw;
+    font-size: 2rem;
     width: auto;
 }
 
@@ -207,7 +209,6 @@
 }
 
 .about-dreamCake{
-    width: 70%;
     margin:auto;
 }
 .carousel-banner{
@@ -402,13 +403,11 @@ ul, ol{
 // responsive
 @media only screen and (max-width: 750px) {
     .btn-principal{
-        width: 40%;
         min-width: 6rem;
         padding:8px 5px;
         font-size: 1rem;
     }
     .btn-secundario{
-        width: 50%;
         min-width: 6rem;
         padding:8px 5px;     
         
@@ -423,7 +422,7 @@ ul, ol{
     }
     .pop-notification{
         top: 98%;
-        right:35%;
+        right:0%;
     }
    
 }

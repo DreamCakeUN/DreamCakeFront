@@ -135,7 +135,9 @@ export class CreatePost extends React.Component {
 			document.documentElement.style.setProperty('--textura-pastel2',"url(http://www.transparenttextures.com/patterns/zig-zag.png)");}
 		
 		return(
-			p.forma=='CI'?(<Pastel></Pastel>):(<PastelC></PastelC>)
+			<div className=".about-dreamCake">
+				{p.forma=='CI'?(<Pastel></Pastel>):(<PastelC></PastelC>)}
+			</div>
 		);
 	}
 	countCakes(p){

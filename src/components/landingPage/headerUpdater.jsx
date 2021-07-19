@@ -140,7 +140,7 @@ export class HeaderUpdater extends React.Component {
 
                         <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around  " >
                         
-                            <a class = "navbar-brand" href = "./">
+                            <a class = "navbar-brand" href = "/">
                                 <img class="img-fluid rounded-circle header-logo" src={logo} alt="one piece"/>
                             </a>
                                    

@@ -65,6 +65,7 @@
 	z-index: 1001;
 	margin-top: 1.5rem;
 	background: transparent;
+	border-radius: 10px;
 }
 .form-post{
 	padding: 1rem 0;
@@ -133,4 +134,14 @@ input+label{
 	right: 5%;
 	border-radius: 50%;
 	min-width: 12%;
+}
+
+@media only screen and (max-width: 750px) {
+	.crearPost{
+		position: static;
+		background-color: rgba(255, 255, 255, 0.722);
+		
+		min-height:7rem ;
+		border:solid 1px var(--color-outline);
+	}
 }

@@ -354,6 +354,7 @@ export class Mensaje extends Index{
             log:'1',
             user:'',
             pastel:-1,
+            form: false
         };
     }
     getM=(e)=>{
@@ -394,9 +395,7 @@ export class Mensaje extends Index{
             );
         }
     }
-    continuar =()=>{
-        
-    }
+    
     postear = () => {
         this.componentDidMount();
         if(this.state.user!=''){
@@ -423,9 +422,7 @@ export class Mensaje extends Index{
             .then(response =>{
                 if(response.id != undefined){
                     this.setState({pastel:response.id})
-                }else{
-                    this.setState({log:'1'})
-                 
+                    this.setState({form:true})
                 }
                   
             });
@@ -435,7 +432,7 @@ export class Mensaje extends Index{
     
    
     render(){
-        let mensaje="Por favor llene todos los campos, de lo contrario el pedido no se realizara con exito";
+        let mensaje="Por favor seleccione y llene todos los campos de lo contrario el pedido no se realizara con exito";
         const f =this.state.log;
         const {getData}= this.props;
         return(
@@ -463,7 +460,7 @@ export class Mensaje extends Index{
                             
                             <div className="modal-body">
                                
-                            {f=='0' ? ( <Formulario datos={this.state}></Formulario>):(f=='1' ?(<p>{mensaje}</p>):(<LoginRegister></LoginRegister>)) }
+                            {f=='1' ?(<LoginRegister></LoginRegister>):(this.state.form==false ?(<p>{mensaje}</p>): ( <Formulario datos={this.state}></Formulario>)) }
                                 
                             </div>
 
