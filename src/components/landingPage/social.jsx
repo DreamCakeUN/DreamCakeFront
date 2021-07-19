@@ -56,7 +56,7 @@ export class Social extends React.Component {
     render() {
         return (
             
-                <div className="container  bg-light">
+                <div className="">
                     {console.log(this.state.data)}
                     <div className="d-flex flex-wrap">
                         {this.state.data.map(e => this.usuarios(e))}

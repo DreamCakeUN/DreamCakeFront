@@ -83,19 +83,20 @@ export class HeaderUpdater extends React.Component {
         if (this.state.userInfo == null || this.state.userInfo.hasOwnProperty('detail')) {
             return (
                <div>
-                    <nav class="navbar   jumbotron-header navbar-expand-md fixed-top justify-content-around " >
+                    <nav class="navbar  navbar-dark jumbotron-header navbar-expand-md fixed-top justify-content-around " >
                         <a class = "navbar-brand" href = "/">
                                     <img class="img-fluid rounded-circle header-logo" src={logo} alt="logo DreamCake"/>
                         </a>
 
-                        <button class ="navbar-toggler" type ="button" data-toggle ="collapse" data-target ="#navbarSupportedContend" aria-controls="navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation">
-                                    <spam class ="navbar-toggler-icon"/>
-                                </button>
+                        <button className="navbar-toggler" type ="button" data-toggle ="collapse" data-target ="#navbarSupportedContend" aria-controls="navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation">
+                            <spam className ="navbar-toggler-icon"/>
+                        </button>
                                 <div class = "collapse navbar-collapse text-center" id ="navbarSupportedContend">
                                     <ul class ="navbar-nav mr-auto ">
                                     <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
                                     <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
                                     </ul>
+
                                     <button type="button" className="btn-principal btn-pequeño align-self-end" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
                                     <button type="button" className="btn-secundario  btn-pequeño" data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
                                 </div> 
@@ -137,36 +138,39 @@ export class HeaderUpdater extends React.Component {
 
 
 
-                        <nav class="navbar navbar-light  jumbotron-header navbar-expand-md fixed-top justify-content-center " >
+                        <nav class="navbar navbar-dark  jumbotron-header navbar-expand-md fixed-top justify-content-around  " >
+                        
                             <a class = "navbar-brand" href = "./">
                                 <img class="img-fluid rounded-circle header-logo" src={logo} alt="one piece"/>
                             </a>
-                            <div className="row">   
-                                <img className=" rounded-circle header-profile" src={this.state.userInfo.foto} />
-                                <img type="button" className="campana-icon img-fluid rounded-circle" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
-                                        <div className="collapse multi-collapse   badge pop-notification" id="notification">
-                                            <Notifications  notifications = {this.props.notifications}></Notifications>
-                                        </div>
-                            </div>
-                            
-                                
+                                   
                                 <button class ="navbar-toggler" type ="button" data-toggle ="collapse" data-target ="#navbarSupportedContend" aria-controls="navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation">
                                     <spam class ="navbar-toggler-icon"/>
                                 </button>
-                                <div class = "collapse navbar-collapse text-center" id ="navbarSupportedContend">
-                                    <ul class ="navbar-nav mr-auto ">
-                                    <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/social">Posts</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href ="/profile">Perfil</a></li>
-                                    <li class =" nav-item"><a class="navbarText" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
-                                    
-                                    {/* <li class =" nav-item "><a class="nav-link" href ="./about.html">About</a></li> */}
-                                    </ul>
-                                </div> 
-                            
-                           
+                                <div class = "collapse navbar-collapse text-center  " id ="navbarSupportedContend">
+                                        <ul class ="navbar-nav mr-auto ">
+                                        <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
+                                        <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
+                                        <li class =" nav-item"><a class="navbarText" href ="/social">Posts</a></li>
+                                        <li class =" nav-item"><a class="navbarText" href ="/profile">Perfil</a></li>
+                                        <li class =" nav-item"><a class="navbarText" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
+                                        
+                                        
+                                        </ul>
 
+                                        {/* barra notificaciones*/}
+                                        <div className="collapse multi-collapse  fade pop-notification" id="notification">
+                                            <Notifications  notifications = {this.props.notifications}></Notifications>
+                                        </div>
+
+                                        <img type="button" className="campana-icon img-fluid rounded-circle" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
+                                        <a href ="/profile">
+                                            <img className=" rounded-circle header-profile" src={this.state.userInfo.foto} />
+                                        </a>
+                                           
+                                </div> 
+                               
+                             
                         </nav>
 
                     </div>

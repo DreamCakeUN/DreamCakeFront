@@ -170,37 +170,42 @@
 }
 //Notificaciones
 .pop-notification{
+    padding: 8px;
     position: absolute;
     top: 5rem;
     right:7rem;
-    background: rgba(255, 255, 255, 0.548);
-    border:solid 1px #17a2b8;
-    backdrop-filter: blur(2px);
+    background-color:rgba(0, 0, 0, 0.27);
+    color: white;
+    border:solid 1px var(--color-outline);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.8s;
 }
 
 
 // BANNER
-
+.img-banner{
+    height:calc(100vh - 6.8rem );
+}
 .img-logo {
     padding: 1px;
     width: 63px;
     margin:0 auto;
 }
+.text-container{
+    font-size: 1vw;
+    width: auto;
+}
+
 
 .carousel-caption{
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
     background-color:rgba(0, 0, 0, 0.27);
-    top:0;
-    max-width: 70%;
-    height: 70%;
-    margin:auto;   
-    align-items: center;
+    height: 85%;
+    font-size: 2rem;
+    margin: auto;
+}
 
-    
-}
-.carousel-text{
-   
-}
 .about-dreamCake{
     width: 70%;
     margin:auto;
@@ -216,7 +221,7 @@
     color: white;
     position:absolute; 
     top:100px; 
-    Left:50px;
+    left:50px;
     font-weight: lighter;
 }
 .normal-text{
@@ -295,11 +300,10 @@
 }
 .header-logo{
     width: 80px;
-    margin-left: 3rem;
+    
 }
 .header-profile{
- margin-left: 4rem;
- margin-right: 1rem;
+ margin:1rem;
  width: 50px;
  height:50px;
 }
@@ -381,10 +385,9 @@ ul, ol{
 
 
 .campana-icon{
-    margin: auto 0; 
+    margin: auto 1rem; 
     width:35px;
     transition: 1s;
-    margin-right:2rem;
 }
 
 
@@ -397,15 +400,30 @@ ul, ol{
 
 
 // responsive
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .btn-principal{
         width: 40%;
         min-width: 6rem;
         padding:8px 5px;
+        font-size: 1rem;
     }
     .btn-secundario{
         width: 50%;
         min-width: 6rem;
         padding:8px 5px;     
+        
     }
+    .text-container p{
+        margin:1px auto;
+        font-size: 1.2rem;
+    }
+    .text-container{
+        height: auto;
+        margin: 5px;
+    }
+    .pop-notification{
+        top: 98%;
+        right:35%;
+    }
+   
 }

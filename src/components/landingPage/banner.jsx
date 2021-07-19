@@ -6,6 +6,7 @@ import "../../../node_modules/popper.js/dist/umd/popper.min";
 import "../../../node_modules/jquery/dist/jquery.slim.min";
 import ban1 from '../../static/images/banner1.jpg'
 import ban2 from '../../static/images/banner2.jpg'
+import logo from '../../static/images/LOGOFINALBANNER.png';
 
 
 export class Banner extends React.Component {
@@ -54,12 +55,13 @@ export class Banner extends React.Component {
                                 <div className="carousel-item active">
                                     
                                     <div className="card">
-                                        <img src={ban1} alt="" className="img-fluid" />
+                                        <img src={ban1} alt="" className="img-banner " />
                                     </div>
                                     
 
-                                    <div className="carousel-caption carousel-text text-center">
-                                            <h2>Crea tu Pastel</h2>
+                                    <div className="carousel-caption  ">
+                                        <div className="text-container">
+                                            <p><b>CREA TU PASTEL!!</b></p>
                                            
                                             <p>1.) ¡Registrate! </p>
                                             <p>2.) ¡Elige la crema! </p>
@@ -67,23 +69,29 @@ export class Banner extends React.Component {
                                             <p>4.) ¡Ponle el relleno! </p>
                                             <p>5.) ¡Decoralo a tu antojo! </p>
                                              <button type="button" className="btn-principal btn-mediano mx-auto d-md-block" id="comenzar" onClick={this.realizarPedido} > COMENZAR </button>
-
+                                        </div>
                                     </div>
                                    
                                 </div>
                                 <div className="carousel-item">
                                 
                                     <div className="card">
-                                        <img src={ban2} alt="" className="img-fluid" />
+                                        <img src={ban2} alt="" className="img-banner " />
                                     </div>
                                     
 
-                                    <div className="carousel-caption justify-content-center text-center">
-                                        <p className="about-dreamCake">En “Dream Cake” creamos deliciosos postres y pasteles con exquisitas recetas,   
-                                            ingredientes de la más alta calidad y con la más fina elaboración, consiguiendo 
-                                            así que nuestros productos sean una
-                                            delicia para los ojos y un capricho para el paladar, 
-                                            solo tienes que segui los siguientes pasos! </p>
+                                    <div className="carousel-caption  ">
+                                        <div className="text-container">
+                                        <img  className="header-logo text-center"src={logo} alt="" />
+                                            <p className="about-dreamCake">
+                                                
+                                                En “Dream Cake” creamos deliciosos postres y pasteles con exquisitas recetas,   
+                                                ingredientes de la más alta calidad y con la más fina elaboración, consiguiendo 
+                                                así que nuestros productos sean una
+                                                delicia para los ojos y un capricho para el paladar, 
+                                                solo tienes que segui los siguientes pasos! 
+                                            </p>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -92,11 +100,12 @@ export class Banner extends React.Component {
                                        <div className="card">
                                        <img src={promo.image} className="img-fluid" />
                                        </div>
-                                       <div className="carousel-caption">
-                                            <h1>{promo.title}</h1>
-                                            <h5>{promo.text}</h5>
+                                        <div className="carousel-caption">
+                                            <div className="text-container">
+                                                <h1>{promo.title}</h1>
+                                                <h5>{promo.text}</h5>
+                                            </div>
                                         </div>
-                                       
 
                                         
                                     </div>
