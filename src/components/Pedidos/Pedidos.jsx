@@ -432,7 +432,7 @@ export class Mensaje extends Index{
     
    
     render(){
-        let mensaje="Por favor seleccione y llene todos los campos de lo contrario el pedido no se realizara con exito";
+        let mensaje="Por favor seleccione y llene todos los campos de lo contrario el pedido no se realizara con exito.";
         const f =this.state.log;
         const {getData}= this.props;
         return(

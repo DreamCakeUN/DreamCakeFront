@@ -46,7 +46,7 @@ export class Information extends React.Component {
         }
 
         return (
-            <div className="div_information">
+            <div className="">
                 {info}
             </div>
         );

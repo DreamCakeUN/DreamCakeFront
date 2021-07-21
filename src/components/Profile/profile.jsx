@@ -107,7 +107,7 @@ export class Profile extends React.Component {
         return (
             <div className="container">
                 <UserData user = {this.state.user}></UserData>
-                <div className ="div-bottom">
+                <div className ="row div-bottom">
                     <Options handleButton={this.handleButton}></Options>
                     <Information datos={this.state.datos} current={this.state.current} modificar = {this.props.modificar}></Information>
                 </div>

@@ -79,6 +79,7 @@ export class HeaderUpdater extends React.Component {
     render() {
         // <Notification putData={this.putData}/> 
         //var user_name = this.state.userInfo.short_name;
+        console.log(this.props)
         console.log('isNull?' + this.state.userInfo == null);
         if (this.state.userInfo == null || this.state.userInfo.hasOwnProperty('detail')) {
             return (
@@ -113,28 +114,6 @@ export class HeaderUpdater extends React.Component {
                 
                    <div > 
                   
-                       {/*  <div className="col-lg-1 col-sm-2 col-2">
-                            <img type="button" className="menubtn img-fluid" src={campana} alt="notificacion" data-toggle="collapse" data-target="#notification" aria-expanded="false" aria-controls="" />
-                            <div className="collapse multi-collapse   badge pop-notification" id="notification">
-                                <Notifications  notifications = {this.props.notifications}></Notifications>
-                            </div>
-                        
-                        </div>
-                        <div className="col-lg-2 col-sm-4 col-4">
-                            <img className="img-fluid rounded-circle" src={this.state.userInfo.foto} />
-                        </div>
-                        <div className="menubtn">
-                            <span className=" btn badge btname-user">{this.state.userInfo.email}</span>
-                            <select type="select" className=" arrow btn  badge " id="perfil" onClick={e=>this.menuSelect(e)}>
-                                <option select  className="btn-dark" value=""></option>
-                                <option className="btn btn-dark" value="Inicio">Inicio</option>
-                                <option className="btn btn-dark" value="Pastel">Crear Pastel</option>
-                                <option className="btn btn-dark" value="Social">Social</option>
-                                <option className="btn btn-dark" value="Perfil">Perfil</option>
-                                <option className="btn btn-dark" value="Salir" >Salir</option>
-                            </select>
-                        </div> */}
-
 
 
 

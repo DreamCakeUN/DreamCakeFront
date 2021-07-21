@@ -33,13 +33,12 @@ export class Options extends React.Component {
     
     render() {
         return (
-            <div className="div_options">
-                <div className="btn-group-vertical">
+            <div className="col-lg-3 col-12">
                     <button name = {0} onClick={this.setCurrent} type="button" className="btn-secundario">Mi Cuenta</button>
                     <button name = {1} onClick={this.setCurrent} type="button" className="btn-secundario">Mis Pasteles </button>
                     <button name = {2} onClick={this.setCurrent} type="button" className="btn-secundario">Mis Pedidos</button>
                     <button type="button" className="btn-secundario " onClick={this.cerrarSesion}>Cerrar Sesión</button>
-                </div>
+                
             </div>
         );
     }

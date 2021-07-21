@@ -30,8 +30,8 @@ export class Social extends React.Component {
                             <h4 className="customer-title justify-content-center"> {e.usuario}</h4> 
                             
                             <div className="row justify-content-around">
-                                 <span className="badge">{this.fecha(e.published_date)}</span>
-                                 <span className="badge">{e.likes}<img src={like} className="likes"></img></span>
+                                 <span className="badge text-secondary align-items-end">{this.fecha(e.published_date)}</span>
+                                 <span className="badge">{e.likes}<img src={like} style={{width:3+'rem'}}></img></span>
                              </div>
                         </div>
                     

@@ -30,8 +30,8 @@ export class Account extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div class="col-8">
+      <div className="">
+        <div class="col-12 col-lg-6 ">
 
         <label className="title">Nombre:  </label>
         <label className="field" > {this.props.datos.full_name == " " ? ' Sin nombre' : this.props.datos.full_name}.</label>
@@ -51,17 +51,8 @@ export class Account extends React.Component {
         <br></br>
         </div>
 
-        <div class="col-4">
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <div class="col-12 col-lg-3">
+        
         <button type="button"  href="#update" className="btn-principal" style={{ width: 11 + 'em' }} data-toggle="modal">Actualizar Datos</button>
         <button  type="button "className="   btn-secundario" style={{ width: 11 + 'em' }} onClick={this.deleteUser}>Eliminar Cuenta</button>
         </div>

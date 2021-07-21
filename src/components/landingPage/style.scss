@@ -395,8 +395,8 @@ ul, ol{
 //Container
 .container{
     margin:6.5rem auto 0;
-    background-image: url("../../static/images/Background.png");
-    min-height:25rem;
+    background-image: url("../../static/images/Background2.png");
+    min-height:calc(100vh - 7.5rem);
 }
 
 

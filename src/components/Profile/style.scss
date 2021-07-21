@@ -1,8 +1,5 @@
 :root{
-    --raya: #9556CC;
-    --textNombre: #9556CC;
-    --fontFamily: open sans, sans-serif;
-    --colorBoton : #7CD5D0;
+    --color-user-data:#00000095;
     --colorLetra : white;
  }
 
@@ -11,12 +8,12 @@
     border: none;
 }
  .user_data{
-    background-color: var(--color-fondo);
+    background-color: #e85a101c;
     background-size: 100% 100%;
     padding-top: 10px;
     padding-bottom: 5px;
-    border: solid;
-    border-color: var(--color-borde);
+    border-bottom: solid 1px var(--color-outline);
+    
     
  }
 
