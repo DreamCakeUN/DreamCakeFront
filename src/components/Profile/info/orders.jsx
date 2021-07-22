@@ -47,7 +47,7 @@ export class Orders extends React.Component {
 					},
 					credentials: "include",
 				};
-				fetch("http://localhost:8000/pastel_pedido/" + parseInt(event.target.name) + "/", requestOptions)
+				fetch("http://back.z4yross.xyz/pastel_pedido/" + parseInt(event.target.name) + "/", requestOptions)
 					.then(response => 
 						response.json()
 					)
@@ -70,7 +70,7 @@ export class Orders extends React.Component {
 			},
 			credentials: "include",
 		};
-		fetch("http://localhost:8000/cancelar_pedido/" + parseInt(event.target.name) + "/", requestOptions)
+		fetch("http://back.z4yross.xyz/cancelar_pedido/" + parseInt(event.target.name) + "/", requestOptions)
 			.then(response => {
 				if (response.status != 200)
 					alert(response.text);

@@ -42,7 +42,7 @@ export class CreatePost extends React.Component {
             body: form_data
         };
 
-		fetch('http://localhost:8000/social/create_post/', requestOptions)
+		fetch('http://back.z4yross.xyz/social/create_post/', requestOptions)
         .then(res => res.json())
         .then(json => {
 			this.props.update()
@@ -96,7 +96,7 @@ export class CreatePost extends React.Component {
 			credentials: "include"
 		};
 
-		fetch('http://localhost:8000/pasteles/', requestOptions)
+		fetch('http://back.z4yross.xyz/pasteles/', requestOptions)
 			.then(res => res.json())
 			.then(json => {
 				this.setState({

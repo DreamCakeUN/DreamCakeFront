@@ -63,7 +63,7 @@ export class CreateBanner extends React.Component {
 			body: form_data
 		};
 
-		fetch('http://localhost:8000/banner/create/', requestOptions)
+		fetch('http://back.z4yross.xyz/banner/create/', requestOptions)
 			.then(res => res.json())
 			.then(json => {
 				// this.props.update()

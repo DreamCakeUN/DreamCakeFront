@@ -47,7 +47,7 @@ export class Social extends React.Component {
 
     componentDidMount = () => {
 
-        fetch('http://localhost:8000/social/all_posts/-likes/3/', { method: 'GET' })
+        fetch('http://back.z4yross.xyz/social/all_posts/-likes/3/', { method: 'GET' })
             .then((response) => response.json())
             .then(responseJson => { this.setState({ data: responseJson }) }
             );

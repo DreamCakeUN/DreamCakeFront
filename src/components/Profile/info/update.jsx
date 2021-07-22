@@ -32,7 +32,7 @@ export class Update extends React.Component {
 			credentials: "include",
             body: form_data
 		};
-        fetch('http://localhost:8000/users/api/auth/user/', requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/user/', requestOptions)
         .then(res => res.json())
         .then(json => { 
             console.log(json);
@@ -50,7 +50,7 @@ export class Update extends React.Component {
 			},
 			credentials: "include",
 		};
-        fetch('http://localhost:8000/users/api/auth/user/disable/', requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/user/disable/', requestOptions)
         .then(res => res.json())
         .then(json => { 
             // console.log(json);

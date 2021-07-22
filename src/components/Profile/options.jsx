@@ -19,7 +19,7 @@ export class Options extends React.Component {
             },
             credentials: "include",
         };
-        fetch('http://localhost:8000/users/api/auth/logout/', requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/logout/', requestOptions)
         .then(res => res.json())
         .then(json =>{
             window.location.pathname = "/"

@@ -20,7 +20,7 @@ export class Banner extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/banner/get_all/')
+        fetch('http://back.z4yross.xyz/banner/get_all/')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ promos: data })
