@@ -55,7 +55,7 @@ export class Banner extends React.Component {
                                 <div className="carousel-item active">
                                     
                                     <div className="card">
-                                        <img src={ban1} alt="" className="img-banner " />
+                                        <img src={ban1} alt="" className="img-fluid " />
                                     </div>
                                     
 
@@ -76,7 +76,7 @@ export class Banner extends React.Component {
                                 <div className="carousel-item">
                                 
                                     <div className="card">
-                                        <img src={ban2} alt="" className="img-banner " />
+                                        <img src={ban2} alt="" className="img-fluid " />
                                     </div>
                                     
 
