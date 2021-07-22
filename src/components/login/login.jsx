@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import logo from '../../static/images/LOGOFINAL.png';
+import swal from 'sweetalert';
 
 class Login extends Component {
 
@@ -38,14 +39,16 @@ class Login extends Component {
       let js = await response.json()
       if (response.status === 400) {
         console.log("credenciales incorrectas")
+         swal({icon:"error",
+        text:'Credenciales incorrectas',
+        background: 'gray'});
       } else if (response.status === 403) {
         console.log("sesion ya iniciada " + JSON.stringify(js))
       } else {
         console.log("otro error: " + JSON.stringify(js) + JSON.stringify(response))
       }
     }
-    
-    window.location.pathname = "/"
+        
   }
 
   onInputchange(event) {
