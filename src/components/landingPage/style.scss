@@ -6,9 +6,12 @@
     --color-boton-hoover:#cd6904c9;
     --color-fondo:#b4986b;
     --color-borde: #733426;
-    --usuarios:"0deg";
-    --posts:"0deg";
-    --interacciones:"0deg";
+    --usuarios:"0";
+    --usuarios-valor:0;
+    --posts:"0";
+    --posts-valor:0;
+    --interacciones:"0";
+    --interacciones-valor:0;
 }
 .btn-principal{
     color:white ;
@@ -175,7 +178,7 @@
             var(--color-outline) 50%
         );
     position: relative;
-    transform: rotate(var(--usuarios));
+    transform: rotate((var(--usuarios-valor)));
     &:before{
         content: "Usuarios";
         line-height: 8rem;
@@ -189,10 +192,10 @@
         background: #ffffff  content-box;
         border-radius: 50%;
         padding:0.5em;
-        transform: rotate(-var(--usuarios));
+        transform: rotate(calc(-1*var(--usuarios-valor)));
     }
     &:after{
-        content: "60";
+        content: var(--usuarios);
         line-height: 6rem;
         color:rgb(0, 0, 0);
         font-size:2em ;
@@ -206,7 +209,7 @@
             rgb(255, 255, 255) 50%
         );
         border-radius: 50%;
-        transform: scale(1.1) rotate(-var(--usuarios));
+        transform: scale(1.2) rotate(calc(-1*var(--usuarios-valor)));
     }
 }
 .circular-posts{
@@ -220,7 +223,7 @@
             var(--color-outline) 50%
         );
     position: relative;
-    transform: rotate(120deg);
+    transform:  rotate((var(--posts-valor)));
     &:before{
         content: "Posts";
         line-height: 8rem;
@@ -234,10 +237,10 @@
         background: #ffffff  content-box;
         border-radius: 50%;
         padding:0.5em;
-        transform: rotate(-120deg);
+        transform: rotate(calc(-1*var(--posts-valor)));
     }
     &:after{
-        content: "60";
+        content: var(--posts);
         line-height: 6rem;
         color:rgb(0, 0, 0);
         font-size:2em ;
@@ -251,7 +254,7 @@
             rgb(255, 255, 255) 50%
         );
         border-radius: 50%;
-        transform: scale(1.1) rotate(-120deg);
+        transform: scale(1.1) rotate(calc(-1*var(--posts-valor)));
     }
 }
 .circular-interacciones{
@@ -265,7 +268,7 @@
             var(--color-outline) 50%
         );
     position: relative;
-    transform: rotate(120deg);
+    transform: rotate(var(--interacciones-valor));
     &:before{
         font-size: 0.5m;
         content: "Likes";
@@ -280,10 +283,10 @@
         background: #ffffff  content-box;
         border-radius: 50%;
         padding:0.5em;
-        transform: rotate(-120deg);
+        transform: rotate(calc(-1*var(--interacciones-valor)));
     }
     &:after{
-        content: "60";
+        content: var(--interacciones);
         line-height: 6rem;
         color:rgb(0, 0, 0);
         font-size:2em ;
@@ -297,7 +300,7 @@
             rgb(255, 255, 255) 50%
         );
         border-radius: 50%;
-        transform: scale(1.1) rotate(-120deg);
+        transform: scale(1.1) rotate(calc(-1*var(--interacciones-valor)));
     }
 }
 
@@ -565,6 +568,22 @@ ul, ol{
     .pop-notification{
         top: 98%;
         right:0%;
+    }
+    .circular-interacciones,.circular-posts,.circular-usuarios{
+        font-size: 10px;
+        width: 7rem;
+        height: 7rem;
+        &:before{
+            width: 7rem;
+            height: 7rem;
+            line-height: 4rem;
+            
+        }
+        &:after{
+            width: 7rem;
+            height: 7rem;
+            line-height: 3.5rem;
+        }
     }
    
 }

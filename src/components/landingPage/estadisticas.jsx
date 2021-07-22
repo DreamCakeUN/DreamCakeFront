@@ -42,24 +42,24 @@ export class Estadisticas extends React.Component {
     var interacciones=document.getElementById('interacciones');
 
     if(usuarios!=null){
-      console.log( usuarios.before())
-      //usuarios.before().style.setProperty('content','Usrios')
-      usuarios.style.setProperty('content','Usuarios')
+      document.documentElement.style.setProperty('--usuarios',"'"+this.state.users+"'");
+      document.documentElement.style.setProperty('--usuarios-valor',((this.state.users/100)*180)+"deg");
 
-      post.style.setProperty('content','Usuarios')
-      post.style.setProperty('content','Usuarios')
-
-      interacciones.style.setProperty('content','Usuarios')
-      interacciones.style.setProperty('content','Usuarios')
+      document.documentElement.style.setProperty('--posts',"'"+this.state.post+"'");
+      document.documentElement.style.setProperty('--posts-valor',((this.state.post/100)*180)+"deg");
+      
+      document.documentElement.style.setProperty('--interacciones',"'"+this.state.interactions+"'");
+      document.documentElement.style.setProperty('--interacciones-valor',((this.state.interactions/100)*180)+"deg");
+      
     }
   }
-  render() {
+  render(){
     this.data()
     return (
       <div className="estadisticas" >
-        <div className="circular-usuarios" id="usuarios">Usuarios</div>
-        <div className="circular-posts" id="posts">Posts</div>
-        <div className="circular-interacciones" id="interacciones">Interacciones</div>
+        <div className="circular-usuarios" id="usuarios"></div>
+        <div className="circular-posts" id="posts"></div>
+        <div className="circular-interacciones" id="interacciones"></div>
        
         {/* < div className="estadisticasUsers">
            <h1><FcConferenceCall></FcConferenceCall></h1> 
