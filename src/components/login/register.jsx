@@ -3,6 +3,7 @@ import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import logo from '../../static/images/LOGOFINAL.png';
 import { Login } from "./login";
+import swal from 'sweetalert';
 
 export class Register extends React.Component {
 
@@ -58,20 +59,29 @@ export class Register extends React.Component {
         if (response.statusText === 'OK') {
             let json = await response.json();
             console.log(json);
-            window.location.pathname = "/profile";
+            swal({icon:"succes",
+            text:'Registro exitoso'});
+            
         }
         else {
             let js = await response.json()
             if (response.status === 400) {
                 console.log("credenciales incorrectas")
+                swal({icon:"error",
+                text:'Datos incorrectos'});
             } else if (response.status === 403) {
                 console.log("sesion ya iniciada " + JSON.stringify(js))
+                swal({icon:"error",
+                text:'sesion ya iniciada',
+                background: 'red'});
             } else {
                 console.log("otro error: " + JSON.stringify(js) + JSON.stringify(response))
+                swal({icon:"error",
+                text:"otro error: " + JSON.stringify(js) + JSON.stringify(response)});
             }
         }
 
-        window.location.pathname = "/"
+        
 
     }
 
