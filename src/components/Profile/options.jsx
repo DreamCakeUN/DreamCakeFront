@@ -11,6 +11,7 @@ export class Options extends React.Component {
     }
 
     cerrarSesion(){
+       
         const requestOptions = {
             method: 'POST',
             headers: { 
@@ -22,9 +23,12 @@ export class Options extends React.Component {
         fetch('http://localhost:8000/users/api/auth/logout/', requestOptions)
         .then(res => res.json())
         .then(json =>{
+            Cookies.remove("sessionid");
+            Cookies.remove("csrftoken");
             window.location.pathname = "/"
             window.location.reload()
         })
+
     }
 
     setCurrent(event){

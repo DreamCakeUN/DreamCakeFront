@@ -53,7 +53,7 @@ export class HeaderUpdater extends React.Component {
     
     logOut(e){
         e.preventDefault();
-
+      
         const requestOptions = {
             method: 'POST',
             headers: { 
@@ -68,6 +68,8 @@ export class HeaderUpdater extends React.Component {
         fetch('http://localhost:8000/users/api/auth/logout/', requestOptions)
         .then(res => res.json())
         .then(json =>{
+            Cookies.remove("sessionid");
+            Cookies.remove("csrftoken");
             window.location.pathname = "/"
             window.location.reload()
         })
@@ -132,7 +134,7 @@ export class HeaderUpdater extends React.Component {
                                         <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
                                         <li class =" nav-item"><a class="navbarText" href ="/social">Posts</a></li>
                                         <li class =" nav-item"><a class="navbarText" href ="/profile">Perfil</a></li>
-                                        <li class =" nav-item"><a class="navbarText" href="#" onClick ={e=>this.logOut(e)}>Salir</a></li>
+                                        <li class =" nav-item"><a class="navbarText" href="#" onClick ={e=>this.logOut(e)}>Cerrar sesion</a></li>
                                         
                                         
                                         </ul>
