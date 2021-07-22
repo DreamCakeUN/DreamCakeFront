@@ -6,6 +6,9 @@
     --color-boton-hoover:#cd6904c9;
     --color-fondo:#b4986b;
     --color-borde: #733426;
+    --usuarios:"0deg";
+    --posts:"0deg";
+    --interacciones:"0deg";
 }
 .btn-principal{
     color:white ;
@@ -172,7 +175,7 @@
             var(--color-outline) 50%
         );
     position: relative;
-    transform: rotate(120deg);
+    transform: rotate(var(--usuarios));
     &:before{
         content: "Usuarios";
         line-height: 8rem;
@@ -186,7 +189,7 @@
         background: #ffffff  content-box;
         border-radius: 50%;
         padding:0.5em;
-        transform: rotate(-120deg);
+        transform: rotate(-var(--usuarios));
     }
     &:after{
         content: "60";
@@ -203,7 +206,7 @@
             rgb(255, 255, 255) 50%
         );
         border-radius: 50%;
-        transform: scale(1.1) rotate(-120deg);
+        transform: scale(1.1) rotate(-var(--usuarios));
     }
 }
 .circular-posts{
@@ -264,8 +267,8 @@
     position: relative;
     transform: rotate(120deg);
     &:before{
-        font-size: 1em;
-        content: "Interacciones";
+        font-size: 0.5m;
+        content: "Likes";
         line-height: 8rem;
         color:rgb(2, 2, 2);
         font-size:2em ;
