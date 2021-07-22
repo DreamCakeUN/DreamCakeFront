@@ -37,7 +37,30 @@ export class Register extends React.Component {
                 return res.json()
             })
             .then(json => {
-                this.login()
+                console.log(json)
+                console.log(this.state)
+                if(json.email=="Enter a valid email address." && json.email!=undefined){
+                    swal({icon:"error",
+                    text:'Ingrese un correo valido'});
+                }else if(json.password=="Password fields didn't match." && json.password!=undefined){
+                    swal({icon:"error",
+                    text:'Asegurese de que las contraeñas coincidan'});
+                }else if(json.password2=="This field is required." && json.password2!=undefined){
+                    swal({icon:"error",
+                    text:'Por favor asegurese de ingresar la contraseña en los dos campos'});
+                }else if(json.password=="This field may not be blank." && json.password!=undefined){
+                    swal({icon:"error",
+                    text:'Debe ingresar una contraseña'});
+                } else if(json.password!=undefined && json.password=="This password is too short. It must contain at least 8 characters."){
+                    swal({icon:"error",
+                    text:'La contraseña debe ser alfanumerica y contener almenos 8 caracteres y debe asegurarse que las contraseñas coincidan'});
+                }else if(json.email!=undefined && json.email[0]=="This field must be unique.")  {
+                    swal({icon:"error",
+                text:'Este correo ya se encuentra registrado'});
+            }else{
+                    this.login()
+                }
+               
             })
             .catch(error => console.log(error))
     }
@@ -58,9 +81,7 @@ export class Register extends React.Component {
 
         if (response.statusText === 'OK') {
             let json = await response.json();
-            console.log(json);
-            swal({icon:"succes",
-            text:'Registro exitoso'});
+            window.location.pathname = "/profile"
             
         }
         else {
@@ -68,7 +89,7 @@ export class Register extends React.Component {
             if (response.status === 400) {
                 console.log("credenciales incorrectas")
                 swal({icon:"error",
-                text:'Datos incorrectos'});
+                text:'La contraseña debe ser alfanumerica y contener almenos 8 caracteres'});
             } else if (response.status === 403) {
                 console.log("sesion ya iniciada " + JSON.stringify(js))
                 swal({icon:"error",
