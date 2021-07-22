@@ -45,7 +45,7 @@ export  class Index extends React.Component {
 
     /*componentDidMount(){   
         let userInfo =  null;
-        fetch('http://localhost:8000/users/api/auth/user/',{
+        fetch('http://back.z4yross.xyz/users/api/auth/user/',{
             method: 'GET',
             credentials:'include',
             headers: {                
@@ -58,7 +58,7 @@ export  class Index extends React.Component {
             .catch(error => console.error('Error:', error));    
             
         
-        fetch('http://localhost:8000/modificar_pastel/2/', {
+        fetch('http://back.z4yross.xyz/modificar_pastel/2/', {
             method: 'GET',
             credentials:'include',
             headers: {                
@@ -157,7 +157,7 @@ export  class Index extends React.Component {
     postearPastel() {
         console.log("vamos a postear el pastel");
         console.log(Cookies.get('csrftoken'))
-       fetch('http://localhost:8000/crear_pastel/', {
+       fetch('http://back.z4yross.xyz/crear_pastel/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ export  class Index extends React.Component {
     }
     editarPastel() {
         console.log("vamos a editar el pastel");
-       fetch('http://localhost:8000/midificar_pastel/'+this.state.id+'/', {
+       fetch('http://back.z4yross.xyz/midificar_pastel/'+this.state.id+'/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -428,7 +428,7 @@ export class Mensaje extends Index{
          
         };
         
-        fetch('http://localhost:8000/users/api/auth/user/',requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/user/',requestOptions)
             .then((response) => response.json())
             .then(responseJson => {  if(responseJson.email!=undefined){this.setState({log:'0',user:responseJson.email})} }
             );
@@ -442,7 +442,7 @@ export class Mensaje extends Index{
          
         };
         console.log("el usuario automatico=")
-        fetch('http://localhost:8000/users/api/auth/user/',requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/user/',requestOptions)
             .then((response) => response.json())
             .then(responseJson => { console.log("email:"+responseJson.email); if(responseJson.email!=undefined){this.setState({log:'0'})} }
             );
@@ -450,7 +450,7 @@ export class Mensaje extends Index{
     postearPastel() {
 
       if (this.state.pastel == -1){
-        fetch('http://localhost:8000/crear_pastel/', {
+        fetch('http://back.z4yross.xyz/crear_pastel/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -542,7 +542,7 @@ export class Formulario extends React.Component{
         
         
 
-        fetch('http://localhost:8000crear_pedido/', {
+        fetch('http://back.z4yross.xyzcrear_pedido/', {
             method: 'POST',
             headers: {
                 // 'Content-Type': 'multipart/form-data',

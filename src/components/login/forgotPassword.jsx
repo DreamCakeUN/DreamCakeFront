@@ -17,7 +17,7 @@ export class ForgotPassword extends React.Component {
 
     renderLogin = async () => {
         try {
-            let res = await fetch("http://localhost:8000/accounts/password/reset/")
+            let res = await fetch("http://back.z4yross.xyz/accounts/password/reset/")
             let html = await res.text();
 
             let parser = new DOMParser();

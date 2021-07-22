@@ -135,7 +135,7 @@ export  class Index extends React.Component {
     postearPastel() {
         console.log("vamos a postear el pastel");
         console.log(Cookies.get('csrftoken'))
-       fetch('http://localhost:8000/crear_pastel/', {
+       fetch('http://back.z4yross.xyz/crear_pastel/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -375,7 +375,7 @@ export class Mensaje extends Index{
 
         
         if(this.state.user===''){
-            fetch('http://localhost:8000/users/api/auth/user/',requestOptions)
+            fetch('http://back.z4yross.xyz/users/api/auth/user/',requestOptions)
             .then((response) => response.json())
             .then(responseJson => {  
                 console.log("estamos comprobando si se inicio una sesion"); 
@@ -410,7 +410,7 @@ export class Mensaje extends Index{
         
 
         if(this.state.pastel ==-1){
-            fetch('http://localhost:8000/crear_pastel/', {
+            fetch('http://back.z4yross.xyz/crear_pastel/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -509,7 +509,7 @@ export class Formulario extends React.Component{
         
         
 
-        fetch('http://localhost:8000/crear_pedido/', {
+        fetch('http://back.z4yross.xyz/crear_pedido/', {
             method: 'POST',
             headers: {
                 // 'Content-Type': 'multipart/form-data',

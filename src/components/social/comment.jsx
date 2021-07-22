@@ -16,7 +16,7 @@ export class Comment extends React.Component{
 		return  (
 			<div className="row">
 				<div className="col-lg-3 col-sm-3 col-3">
-					<img className="img-perfil" src="http://localhost:8000/media/postImages/321_jbjNKPP.png" alt="perfil" />
+					<img className="img-perfil" src="http://back.z4yross.xyz/media/postImages/321_jbjNKPP.png" alt="perfil" />
 				</div>
 				<div className= "col-lg-9 col-sm-9 col-9">
 					<div className="badge badge-light item-comments text-wrap">

@@ -45,7 +45,7 @@ export class Moderadores extends React.Component {
 			},
 			credentials: "include",
 		};
-		fetch("http://localhost:8000/users/api/auth/all_users/", requestOptions)
+		fetch("http://back.z4yross.xyz/users/api/auth/all_users/", requestOptions)
 			.then(response => response.json())
 			.then(json => this.setState({ users: json }))
 			.catch(error => console.log(error))
@@ -85,7 +85,7 @@ export class Moderadores extends React.Component {
 			credentials: "include",
 			body: JSON.stringify(b)
 		};
-		fetch("http://localhost:8000/users/api/auth/user/admin/" + id + "/", requestOptions)
+		fetch("http://back.z4yross.xyz/users/api/auth/user/admin/" + id + "/", requestOptions)
 			.then(response => response.json())
 			.then(json => {
 				console.log(json);

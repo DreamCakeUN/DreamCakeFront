@@ -35,7 +35,7 @@ export class App extends React.Component {
 
   renderLogin = async () => {
     try {
-      let res = await fetch("http://localhost:8000/accounts/login/")
+      let res = await fetch("http://back.z4yross.xyz/accounts/login/")
       let html = await res.text();
 
       let parser = new DOMParser();

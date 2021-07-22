@@ -22,7 +22,7 @@ export class HeaderUpdater extends React.Component {
     componentDidMount(e) {
         
 
-        fetch('http://localhost:8000/users/api/auth/user/', {
+        fetch('http://back.z4yross.xyz/users/api/auth/user/', {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -65,7 +65,7 @@ export class HeaderUpdater extends React.Component {
                 likes:this.state.like+1
             })
         };
-        fetch('http://localhost:8000/users/api/auth/logout/', requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/logout/', requestOptions)
         .then(res => res.json())
         .then(json =>{
             Cookies.remove("sessionid");

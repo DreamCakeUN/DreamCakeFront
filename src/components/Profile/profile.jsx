@@ -18,7 +18,7 @@ export class Profile extends React.Component {
             last_login: "2021-06-24T20:27:53.436704Z",
             is_superuser: true,
             is_staff: true,
-            foto: "http://localhost:8000/media/users/default.jpg"
+            foto: "http://back.z4yross.xyz/media/users/default.jpg"
         }
 
         this.state = {
@@ -38,7 +38,7 @@ export class Profile extends React.Component {
             method: 'GET',
             credentials: 'include'
         };
-        fetch('http://localhost:8000/users/api/auth/user/', requestOptions)
+        fetch('http://back.z4yross.xyz/users/api/auth/user/', requestOptions)
         .then((response) => response.json())
         .then(responseJson => { 
             if(responseJson.hasOwnProperty('email')){
@@ -58,7 +58,7 @@ export class Profile extends React.Component {
             method: 'GET',
             credentials: 'include'
         };
-        fetch(`http://localhost:8000/pasteles/`, requestOptions)
+        fetch(`http://back.z4yross.xyz/pasteles/`, requestOptions)
         .then((response) => response.json())
         .then(responseJson => { 
             this.setState({
@@ -74,7 +74,7 @@ export class Profile extends React.Component {
             method: 'GET',
             credentials: 'include'
         };
-        fetch(`http://localhost:8000/pedidos/`, requestOptions)
+        fetch(`http://back.z4yross.xyz/pedidos/`, requestOptions)
         .then((response) => response.json())
         .then(responseJson => { 
             this.setState({
