@@ -97,14 +97,14 @@ export class HeaderUpdater extends React.Component {
                                     <li class =" nav-item"><a class="navbarText" href ="/">Inicio</a></li>
                                     <li class =" nav-item"><a class="navbarText" href ="/crearPastel/">Crear Pastel</a></li>
                                     </ul>
-
+                                    <Register /> 
+                                    <Login />
                                     <button type="button" className="btn-principal btn-pequeño align-self-end" data-toggle="modal" data-target="#login" value="login" data-backdrop="false" y data-dismiss="modal">Iniciar Sesión</button>
                                     <button type="button" className="btn-secundario  btn-pequeño" data-toggle="modal" data-target="#register" value="register" data-backdrop="false" data-dismiss="modal" >Registrarse</button>
                                 </div> 
         
                       
-                        <Register />                       
-                        <Login />
+                       
                     </nav>
                </div>
             );
