@@ -160,6 +160,145 @@
     margin: auto;
     font-size:  11px;
 }
+//Estadisticas
+.circular-usuarios{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    content:"------sadas----";
+    margin:auto;
+    background: linear-gradient(
+            rgba(26, 26, 26, 0.39) 50%,
+            var(--color-outline) 50%
+        );
+    position: relative;
+    transform: rotate(120deg);
+    &:before{
+        content: "Usuarios";
+        line-height: 8rem;
+        color:rgb(2, 2, 2);
+        font-size:2em ;
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #ffffff  content-box;
+        border-radius: 50%;
+        padding:0.5em;
+        transform: rotate(-120deg);
+    }
+    &:after{
+        content: "60";
+        line-height: 6rem;
+        color:rgb(0, 0, 0);
+        font-size:2em ;
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: linear-gradient(
+            transparent 50%,
+            rgb(255, 255, 255) 50%
+        );
+        border-radius: 50%;
+        transform: scale(1.1) rotate(-120deg);
+    }
+}
+.circular-posts{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    content:"------sadas----";
+    margin:auto;
+    background: linear-gradient(
+            rgba(26, 26, 26, 0.39) 50%,
+            var(--color-outline) 50%
+        );
+    position: relative;
+    transform: rotate(120deg);
+    &:before{
+        content: "Posts";
+        line-height: 8rem;
+        color:rgb(2, 2, 2);
+        font-size:2em ;
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #ffffff  content-box;
+        border-radius: 50%;
+        padding:0.5em;
+        transform: rotate(-120deg);
+    }
+    &:after{
+        content: "60";
+        line-height: 6rem;
+        color:rgb(0, 0, 0);
+        font-size:2em ;
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: linear-gradient(
+            transparent 50%,
+            rgb(255, 255, 255) 50%
+        );
+        border-radius: 50%;
+        transform: scale(1.1) rotate(-120deg);
+    }
+}
+.circular-interacciones{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    content:"------sadas----";
+    margin:auto;
+    background: linear-gradient(
+            rgba(26, 26, 26, 0.39) 50%,
+            var(--color-outline) 50%
+        );
+    position: relative;
+    transform: rotate(120deg);
+    &:before{
+        font-size: 1em;
+        content: "Interacciones";
+        line-height: 8rem;
+        color:rgb(2, 2, 2);
+        font-size:2em ;
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #ffffff  content-box;
+        border-radius: 50%;
+        padding:0.5em;
+        transform: rotate(-120deg);
+    }
+    &:after{
+        content: "60";
+        line-height: 6rem;
+        color:rgb(0, 0, 0);
+        font-size:2em ;
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: linear-gradient(
+            transparent 50%,
+            rgb(255, 255, 255) 50%
+        );
+        border-radius: 50%;
+        transform: scale(1.1) rotate(-120deg);
+    }
+}
+
+
 
 .estadisticas{
     display: flex;

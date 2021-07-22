@@ -1,3 +1,4 @@
+import { data } from "jquery";
 import React from "react";
 import { FcConferenceCall } from "react-icons/fc";
 import { FcEditImage } from "react-icons/fc";
@@ -35,11 +36,32 @@ export class Estadisticas extends React.Component {
       post: postJS
     });
   }
+  data(){
+    var usuarios=document.getElementById('usuarios');
+    var post=document.getElementById('posts');
+    var interacciones=document.getElementById('interacciones');
 
+    if(usuarios!=null){
+      console.log( usuarios.before())
+      //usuarios.before().style.setProperty('content','Usrios')
+      usuarios.style.setProperty('content','Usuarios')
+
+      post.style.setProperty('content','Usuarios')
+      post.style.setProperty('content','Usuarios')
+
+      interacciones.style.setProperty('content','Usuarios')
+      interacciones.style.setProperty('content','Usuarios')
+    }
+  }
   render() {
+    this.data()
     return (
       <div className="estadisticas" >
-        < div className="estadisticasUsers">
+        <div className="circular-usuarios" id="usuarios">Usuarios</div>
+        <div className="circular-posts" id="posts">Posts</div>
+        <div className="circular-interacciones" id="interacciones">Interacciones</div>
+       
+        {/* < div className="estadisticasUsers">
            <h1><FcConferenceCall></FcConferenceCall></h1> 
           <label>
             Tenemos {this.state.users} usuarios
@@ -56,7 +78,7 @@ export class Estadisticas extends React.Component {
           <label>
             Hemos recibido {this.state.interactions} interacciones
           </label>
-        </div>
+        </div> */}
       </div>
     );
   }
